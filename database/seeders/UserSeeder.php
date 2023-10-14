@@ -23,5 +23,14 @@ class UserSeeder extends Seeder
             'password' => Hash::make('admin123'),
             'isActive' => true,
         ]);
+        User::create([
+            'role_id' => 2,
+            'dni' => '12345678',
+            'name' => 'Branco Neira',
+            'phone' => '9986998381',
+            'username' => 'bneira',
+            'password' => Hash::make('branco123'),
+            'isActive' => true,
+        ]);     
     }
 }

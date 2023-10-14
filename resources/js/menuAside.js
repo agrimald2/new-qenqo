@@ -74,14 +74,24 @@ export default [
       },
       {
         label: "Roles",
-        href: "/users/trainers",
+        href: "/trainers",
+        icon: mdiEye,
+      },
+      {
+        label: "Roles",
+        href: "/trainers",
         icon: mdiEye,
       },
       {
         label: "Estados de Asistencia",
-        href: "/users/nutricionists",
+        href: "/",
         icon: mdiEye,
       },
     ],
+  },
+  {
+    href: "/",
+    label: "Cod. Descuento",
+    icon: mdiTable,
   },
 ];
