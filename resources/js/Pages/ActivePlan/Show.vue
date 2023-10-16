@@ -112,11 +112,12 @@ export default {
         },
         fetchPayments() {
             axios.get('/api/activePlanPayments/' + this.activePlan.id)
-                .then(response => {
-                    this.payments = response.data;
-                    this.fetchActivePlan();
-                })
-                .catch(error => {
+            .then(response => {
+                this.payments = response.data;
+                this.fetchActivePlan();
+            })
+            .catch(error => {
+                    console.log("Emit:");
                     console.error(error);
                 });
         },

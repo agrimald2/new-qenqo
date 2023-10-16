@@ -82,16 +82,14 @@ export default {
                 });
         },
         async addPayment() {
-            console.log("HOLA");
-            return;
             this.payment.payment_method = this.selectedPaymentMethod.value;
             this.payment.student_id = this.selectedStudent.value;
-
             try {
                 //const data = { active_plan_id: this.activePlan.id, student_id: student };
                 await axios.post('/api/activePlanPayments/', this.payment);
                 this.$emit('payment-added')
             } catch (error) {
+                console.log("Add payment");
                 console.error(error);
             }
         }
