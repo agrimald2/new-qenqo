@@ -61,6 +61,6 @@ Route::get('/activePlans/{id}/students', [ActivePlanController::class, 'getStude
 Route::get('/activePlans/getById/{id}', [ActivePlanController::class, 'getActivePlanById']);
 Route::post('/activePlans/delete/student', [ActivePlanController::class, 'removeStudentFromActivePlan']);
 
-Route::post('/activePlanPayments', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'store']);
+Route::post('/activePlanPayment', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'store']);
 Route::delete('/activePlanPayments/{id}', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'deletePayment']);
 Route::get('/activePlanPayments/{id}', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'getPaymentsFromActivePlan']);

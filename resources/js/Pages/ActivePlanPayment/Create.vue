@@ -86,7 +86,7 @@ export default {
             this.payment.student_id = this.selectedStudent.value;
             try {
                 //const data = { active_plan_id: this.activePlan.id, student_id: student };
-                await axios.post('/api/activePlanPayments/', this.payment);
+                await axios.post('/api/activePlanPayment/', this.payment);
                 this.$emit('payment-added')
             } catch (error) {
                 console.log("Add payment");
