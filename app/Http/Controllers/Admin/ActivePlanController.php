@@ -74,6 +74,7 @@ class ActivePlanController extends Controller
         return response()->json($activePlan, 200);
     }
     public function addStudentToActivePlan(Request $request){
+        return;
         // Validate the request data
         $validatedData = $request->validate([
             'active_plan_id' => 'required|exists:active_plans,id',

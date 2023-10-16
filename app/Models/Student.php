@@ -25,4 +25,9 @@ class Student extends Model
     {
         return $this->hasMany(ActivePlanPayment::class);
     }
+
+    public function referredBy()
+    {
+        return $this->belongsTo(User::class, 'reffered_by');
+    }
 }

@@ -18,7 +18,8 @@ const emit = defineEmits(['student-created']);
 
 const createStudent = async () => { // method to create a student
     try {
-        const response = await axios.post('/api/students', { dni: dni.value, name: name.value, phone: phone.value, username: username.value, password: password.value, reffered_by: reffered_by.value });
+        const reffered_by_value = reffered_by.value.value; // access the "value" property from reffered_by
+        const response = await axios.post('/api/students', { dni: dni.value, name: name.value, phone: phone.value, username: username.value, password: password.value, reffered_by: reffered_by_value });
         dni.value = ''; // reset the input field
         name.value = ''; // reset the input field
         phone.value = ''; // reset the input field
@@ -34,13 +35,41 @@ const createStudent = async () => { // method to create a student
 
 <template>
     <CardBoxModal :title="'Crear Estudiante'" :hasCancel="true" class="bg-gray-500 slide-in-top my-2">
-            <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="DNI" v-model="dni" />
-            <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Nombre" v-model="name" />
-            <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Teléfono" v-model="phone" />
-            <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Nombre de usuario" v-model="username" />
-            <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Contraseña" v-model="password" />
-            <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Referido por" v-model="reffered_by" />
-        <BaseButton :icon="mdiPlusCircle" label="Guardar" class="bg-gray-300" target="_blank" rounded-full color=""
+        <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="DNI" v-model="dni" />
+        <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Nombre" v-model="name" />
+        <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Teléfono" v-model="phone" />
+        <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Nombre de usuario" v-model="username" />
+        <FormControl :icon="mdiPlusCircle" class="my-1" placeholder="Contraseña" v-model="password" />
+        <FormControl :icon="mdiPlusCircle" type="select"
+            :options="trainers.map(trainer => ({ label: trainer.user.name, value: trainer.user.id }))"
+            @change="addSelectedStudentToActivePlan" v-model="reffered_by" />
+            <BaseButton :icon="mdiPlusCircle" label="Guardar" class="bg-gray-300" target="_blank" rounded-full color=""
             @click="createStudent" />
     </CardBoxModal>
 </template>
+<script>
+import axios from 'axios';
+
+export default {
+    props: ['activePlan'],
+    data() {
+        return {
+            trainers: [],
+        }
+    },
+    methods: {
+        fetchTrainers() {
+            axios.get('/api/getTrainers')
+                .then(response => {
+                    this.trainers = response.data;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        },
+    },
+    mounted() {
+        this.fetchTrainers();
+    },
+}
+</script>

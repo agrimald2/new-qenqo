@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 use App\Models\User;
 use App\Models\Student;
 use Illuminate\Support\Facades\Hash;
@@ -45,7 +46,11 @@ class StudentController extends Controller
 
     public function getStudents()
     {
-        $students = Student::with('user')->get();
+        $students = Student::with('user')->with('referredBy')->get();
         return response()->json($students);
+    }
+
+    public function index(){
+        return Inertia::render('Students/Index');
     }
 }

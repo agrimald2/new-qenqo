@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('reffered_by')->nullable();
+            $table->unsignedBigInteger('reffered_by')->nullable();
             $table->timestamps();
         });
     }

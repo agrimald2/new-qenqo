@@ -58,7 +58,7 @@ export default [
       },
       {
         label: "Estudiantes",
-        href: "/users/admin",
+        href: "/students",
         icon: mdiGymnastics,
       },
     ],

@@ -85,9 +85,12 @@ export default {
             this.payment.payment_method = this.selectedPaymentMethod.value;
             this.payment.student_id = this.selectedStudent.value;
             try {
-                //const data = { active_plan_id: this.activePlan.id, student_id: student };
-                await axios.post('/api/activePlanPayment', this.payment);
-                this.$emit('payment-added')
+                let response = await axios.post('/api/activePlanPayment', this.payment);
+                if(response.status === 201){
+                    this.$emit('payment-added')
+                } else {
+                    throw new Error(`Request failed with status code ${response.status}`);
+                }
             } catch (error) {
                 console.log("Add payment");
                 console.error(error);

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\RateController;
 use App\Http\Controllers\Admin\ActivePlanController;
+use App\Http\Controllers\Admin\StudentController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -38,6 +39,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/activePlans/{id}', [ActivePlanController::class, 'show']);
     
     Route::post('/activePlans', [App\Http\Controllers\Admin\ActivePlanController::class, 'store']);
+    
+    Route::get('/students', [StudentController::class, 'index'])->name('student.index');
 });
 
 require __DIR__.'/auth.php';
