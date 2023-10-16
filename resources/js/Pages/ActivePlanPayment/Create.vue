@@ -82,6 +82,8 @@ export default {
                 });
         },
         async addPayment() {
+            console.log("HOLA");
+            return;
             this.payment.payment_method = this.selectedPaymentMethod.value;
             this.payment.student_id = this.selectedStudent.value;
 
