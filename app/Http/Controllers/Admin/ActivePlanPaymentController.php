@@ -12,6 +12,7 @@ use Log;
 class ActivePlanPaymentController extends Controller
 {
     public function store(Request $request){
+        Log::debug($request);
         $user = Auth::user();
         $user_name = 'NO';
         if($user){
@@ -52,9 +53,7 @@ class ActivePlanPaymentController extends Controller
     }
 
     public function getPaymentsFromActivePlan($id){
-        Log::debug($id);
         $payments = ActivePlanPayment::where('active_plan_id', $id)->with(['student.user'])->get();
-        Log::debug($payments);
         return response()->json($payments);
     }
 }

@@ -16,7 +16,6 @@ class RateController extends Controller
 
     public function store(Request $request)
     {
-        Log::debug($request);
         $rate = Rate::create($request->all());
         return response()->json($rate, 201);
     }
