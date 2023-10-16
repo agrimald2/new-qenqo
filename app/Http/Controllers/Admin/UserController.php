@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Student;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class UserController extends Controller
@@ -41,5 +42,10 @@ class UserController extends Controller
         $user = User::find($user_id);
         $user->password = Hash::make($password);
         $user->save();
+    }
+
+    public function myProfile(){
+        $user = Auth::user();
+        return redirect()->route('user.showProfile', ['id' => $user->id]);
     }
 }

@@ -6,6 +6,7 @@ export const useMainStore = defineStore("main", {
     /* User */
     userName: null,
     userEmail: null,
+    userId: null,
     userAvatar: null,
 
     /* Field focus with ctrl+k (to register only once) */
@@ -27,8 +28,12 @@ export const useMainStore = defineStore("main", {
   }),
   actions: {
     setUser(payload) {
+      console.dir(payload);
       if (payload.name) {
         this.userName = payload.name;
+      }
+      if (payload.id) {
+        this.userId = payload.id;
       }
       if (payload.email) {
         this.userEmail = payload.email;
