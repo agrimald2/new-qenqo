@@ -95,9 +95,9 @@ const openDeleteModal = (rate) => {
 
 
 <template>
-    <CardBoxModal v-model="isModalDangerActive" title="Eliminar Tarifa" button="danger" buttonLabel="Eliminar" has-cancel
+    <CardBoxModal v-model="isModalDangerActive" title="Eliminar Alumno" button="danger" buttonLabel="Eliminar" has-cancel
         @confirm="deleteRate">
-        <p>Are you sure you want to delete this rate?</p>
+        <p>Are you sure you want to delete this student?</p>
     </CardBoxModal>
     <div v-if="checkedRows.length" class="p-3 bg-gray-100/50 dark:bg-slate-800">
         <span v-for="checkedRow in checkedRows" :key="checkedRow.id"
@@ -140,7 +140,6 @@ const openDeleteModal = (rate) => {
                 </td>
                 <td class="before:hidden lg:w-1 whitespace-nowrap">
                     <BaseButtons type="justify-start lg:justify-end" no-wrap>
-                        <BaseButton color="danger" :icon="mdiTrashCan" small @click="() => openDeleteModal(item)" />
                         <BaseButton color="warning" :icon="mdiDrawPen" small @click="() => openDeleteModal(item)" />
                     </BaseButtons>
                 </td>

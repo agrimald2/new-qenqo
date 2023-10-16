@@ -19,7 +19,7 @@ import { mdiPlusCircle } from "@mdi/js";
                 </div>
             </div>
             <Table :students="students" />
-            <Create v-if="showCreate" @active-plan-created="activePlanAdded" />
+            <Create v-if="showCreate" @student-created="fetchStudents" />
         </SectionMain>
     </LayoutAuthenticated>
 </template>
