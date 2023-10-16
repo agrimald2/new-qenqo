@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\DiscountCodeController;
 use App\Http\Controllers\Admin\ActivePlanController;
 use App\Http\Controllers\Admin\ActivePlanPaymentController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +65,10 @@ Route::post('/activePlans/delete/student', [ActivePlanController::class, 'remove
 Route::post('/activePlanPayment', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'store']);
 Route::delete('/activePlanPayments/{id}', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'deletePayment']);
 Route::get('/activePlanPayments/{id}', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'getPaymentsFromActivePlan']);
+
+Route::put('/user/{id}/information', [UserController::class, 'updateUserInformation']);
+Route::put('/user/{id}/password', [UserController::class, 'updateUserPassword']);
+
+
+
+Route::put('/student/{id}/updateRefferedBy', [StudentController::class, 'updateRefferedBy']);

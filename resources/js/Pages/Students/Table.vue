@@ -140,7 +140,7 @@ const openDeleteModal = (rate) => {
                 </td>
                 <td class="before:hidden lg:w-1 whitespace-nowrap">
                     <BaseButtons type="justify-start lg:justify-end" no-wrap>
-                        <BaseButton color="warning" :icon="mdiDrawPen" small @click="() => openDeleteModal(item)" />
+                        <BaseButton color="warning" :icon="mdiDrawPen" small :href="'user/'+item.user_id" />
                     </BaseButtons>
                 </td>
             </tr>

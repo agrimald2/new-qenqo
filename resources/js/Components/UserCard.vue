@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, reactive } from "vue";
 import { useMainStore } from "@/Stores/main";
 import { mdiCheckDecagram } from "@mdi/js";
 import BaseLevel from "@/Components/BaseLevel.vue";
@@ -13,6 +13,10 @@ const mainStore = useMainStore();
 const userName = computed(() => mainStore.userName);
 
 const userSwitchVal = ref(false);
+
+const props = defineProps({
+    user: Array
+});
 </script>
 
 <template>
@@ -30,10 +34,10 @@ const userSwitchVal = ref(false);
           />
         </div>
         <h1 class="text-2xl">
-          Howdy, <b>{{ userName }}</b
+          Bienvenido, <b>{{ user.name }}</b 
           >!
         </h1>
-        <p>Last login <b>12 mins ago</b> from <b>127.0.0.1</b></p>
+        <p><b> {{ user.role.name }} </b></p>
         <div class="flex justify-center md:block">
           <PillTag label="Verified" color="info" :icon="mdiCheckDecagram" />
         </div>

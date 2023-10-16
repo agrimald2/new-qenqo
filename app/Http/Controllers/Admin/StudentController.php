@@ -53,4 +53,17 @@ class StudentController extends Controller
     public function index(){
         return Inertia::render('Students/Index');
     }
+
+    public function updateRefferedBy(Request $request){
+        Log::debug($request);
+        $user_id = $request->input('user_id');
+        $reffered_by = $request->input('reffered_by');
+        Log::debug($reffered_by);
+        Log::debug($user_id);
+        $student = Student::where('user_id', $user_id)->first();
+
+        $student->reffered_by = $reffered_by;
+        $student->save();
+    }
+
 }
