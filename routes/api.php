@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\DiscountCodeController;
 use App\Http\Controllers\Admin\ActivePlanController;
 use App\Http\Controllers\Admin\ActivePlanPaymentController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ActivePlanAppointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::get('/activePlans', [ActivePlanController::class, 'getActivePlans']);
 Route::post('/activePlans/{id}/students', [ActivePlanController::class, 'addStudentToActivePlan']);
 Route::get('/activePlans/{id}/students', [ActivePlanController::class, 'getStudentsOfActivePlan']);
 Route::get('/activePlans/getById/{id}', [ActivePlanController::class, 'getActivePlanById']);
+
 Route::post('/activePlans/delete/student', [ActivePlanController::class, 'removeStudentFromActivePlan']);
 
 Route::post('/activePlanPayment', [App\Http\Controllers\Admin\ActivePlanPaymentController::class, 'store']);
@@ -72,3 +74,7 @@ Route::put('/user/{id}/password', [UserController::class, 'updateUserPassword'])
 
 
 Route::put('/student/{id}/updateRefferedBy', [StudentController::class, 'updateRefferedBy']);
+
+Route::get('/activePlans/appointments/{id}', [ActivePlanController::class, 'getActivePlanAppointments']);
+
+Route::post('/activePlanAppointments', [ActivePlanAppointmentController::class, 'store']);

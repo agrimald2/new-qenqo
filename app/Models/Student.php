@@ -30,4 +30,12 @@ class Student extends Model
     {
         return $this->belongsTo(User::class, 'reffered_by');
     }
+
+    public function assistances()
+    {
+        return $this->hasManyThrough(
+            ActivePlanAppointmentAssistance::class,
+            ActivePlanAppointment::class
+        );
+    }
 }

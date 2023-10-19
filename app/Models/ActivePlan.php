@@ -33,4 +33,9 @@ class ActivePlan extends Model
     {
         return $this->hasMany(ActivePlanPayment::class);
     }
+
+    public function appointments()
+    {
+        return $this->hasMany(ActivePlanAppointment::class);
+    }
 }

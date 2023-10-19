@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\RateController;
 use App\Http\Controllers\Admin\ActivePlanController;
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ActivePlanAppointmentController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/activePlans', [ActivePlanController::class, 'index'])->name('activePlan.index');
     Route::get('/activePlans/{id}', [ActivePlanController::class, 'show']);
     
+    
     Route::post('/activePlans', [App\Http\Controllers\Admin\ActivePlanController::class, 'store']);
     
     Route::get('/students', [StudentController::class, 'index'])->name('student.index');
@@ -46,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/user/{id}', [UserController::class, 'showProfile'])->name('user.showProfile');
     
     Route::get('/myProfile', [UserController::class, 'myProfile']);
+    
+    Route::get('/activePlanAppointments/{id}', [ActivePlanAppointmentController::class, 'show']);
 });
 
 require __DIR__.'/auth.php';

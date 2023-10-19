@@ -29,13 +29,18 @@ export default [
   },
   {
     href: "/activePlans",
+    label: "Clases",
+    icon: mdiViewList,
+  },
+  {
+    href: "/activePlans",
     label: "Grupos y Planes",
     icon: mdiTable,
   },
   {
     href: "/rates",
     label: "Planes",
-    icon: mdiTable,
+    icon: mdiTelevisionGuide,
   },
   {
     label: "Usuarios",
@@ -78,7 +83,7 @@ export default [
         icon: mdiEye,
       },
       {
-        label: "Roles",
+        label: "Tipo de Tarifas",
         href: "/trainers",
         icon: mdiEye,
       },

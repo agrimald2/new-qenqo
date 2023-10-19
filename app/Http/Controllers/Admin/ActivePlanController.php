@@ -151,4 +151,21 @@ class ActivePlanController extends Controller
         return response()->json(['message' => 'ActivePlan not found'], 404);
     }
 
+    public function getActivePlanAppointments($id)
+    {
+        Log::debug($id);
+        // Find the ActivePlan with the given id
+        $activePlan = ActivePlan::find($id);
+        
+        // If the ActivePlan exists, get its appointments
+        if ($activePlan) {
+            $appointments = $activePlan->appointments;
+            Log::debug($appointments);
+            return response()->json($appointments, 200);
+        }
+
+        // If the ActivePlan does not exist, return a 404 response
+        return response()->json(['message' => 'ActivePlan not found'], 404);
+    }
+
 }

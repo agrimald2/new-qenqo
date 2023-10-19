@@ -48,14 +48,39 @@ import PillTag from "@/Components/PillTag.vue";
                     </CardBox>
                 </div>
                 <div class="md:col-2 col">
-                    <BaseButton @click="toggleCreatePayment" :icon="mdiPlusCircle" label="Pagos" class="bg-green-300 my-2 mx-2"/>
-                    <PillTag color="warning" :label="'Falta Pagar ' + (activePlan.total - activePlan.total_payed)" :small="pillsSmall" :outline="pillsOutline"
-                        :icon="pillsIcon" />
+                    <BaseButton @click="toggleCreatePayment" :icon="mdiPlusCircle" label="Pagos"
+                        class="bg-green-300 my-2 mx-2" />
+                    <PillTag color="warning" :label="'Falta Pagar ' + (activePlan.total - activePlan.total_payed)"
+                        :small="pillsSmall" :outline="pillsOutline" :icon="pillsIcon" />
                     <CardBox class="mb-2">
                         <CreatePayment :activePlan="activePlan" @payment-added="fetchPayments" v-if="showCreatePayment" />
                         <PaymentList :payments="payments" />
                     </CardBox>
                 </div>
+            </div>
+            <div class="mb-6">
+                <SectionTitleLineWithButton title="Clases" />
+                <BaseButton @click="toggleCreateAppointment" :icon="mdiPlusCircle" label="Clase" class="bg-green-300 my-2"
+                    color="" target="_blank" rounded-full />
+                <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
+                    <CardBox class="mb-2">
+                        <FormControl :icon="mdiPlusCircle" type="date" @change="addSelectedStudentToActivePlan"
+                            v-model="selectedStudent" />
+                    </CardBox>
+                    <CardBox class="mb-2">
+                        <FormControl :icon="mdiPlusCircle" type="date" @change="addSelectedStudentToActivePlan"
+                            v-model="selectedStudent" />
+                    </CardBox>
+                    <CardBox class="mb-2">
+                        <FormControl :icon="mdiPlusCircle" type="select"
+                            :options="appointment_statuses.map(status => ({ label: status.value, value: status.id }))"
+                            @change="addSelectedStudentToActivePlan" v-model="selectedStudent" />
+                    </CardBox>
+                </div>
+                <CreateAppointment :activePlan="activePlan" v-if="showCreateAppointment" />
+                <CardBox class="mb-2">
+                    <AppointmentTable :appointments="appointments" />
+                </CardBox>
             </div>
         </SectionMain>
     </LayoutAuthenticated>
@@ -66,6 +91,8 @@ import CreatePayment from "../ActivePlanPayment/Create.vue";
 import StudentList from "../Students/List.vue";
 import PaymentList from "../ActivePlanPayment/List.vue";
 import Table from "./Table.vue";
+import AppointmentTable from "../Appointment/Table.vue";
+import CreateAppointment from "../Appointment/Create.vue";
 import axios from 'axios';
 
 export default {
@@ -74,19 +101,29 @@ export default {
         return {
             showCreateStudents: false,
             showCreatePayment: false,
+            showCreateAppointment: false,
             active_students: [],
             students: [],
             selectedStudent: null,
             payments: [],
+            appointment_statuses: [
+                { id: 1, value: "Confirmado" },
+                { id: 2, value: "Finalizado" },
+                { id: 3, value: "Cancelado" }
+            ],
+            appointments: []
         }
     },
-    components: [CreateStudents, StudentList, CreatePayment, PaymentList],
+    components: [CreateStudents, StudentList, CreatePayment, PaymentList, CreateAppointment],
     methods: {
         toggleCreateStudents() {
             this.showCreateStudents = !this.showCreateStudents;
         },
         toggleCreatePayment() {
             this.showCreatePayment = !this.showCreatePayment;
+        },
+        toggleCreateAppointment() {
+            this.showCreateAppointment = !this.showCreateAppointment;
         },
         handleNewStudent(student) {
             this.toggleCreateStudents();
@@ -110,23 +147,34 @@ export default {
                     console.error(error);
                 });
         },
-        fetchPayments() {
+        async fetchPayments() {
             axios.get('/api/activePlanPayments/' + this.activePlan.id)
-            .then(response => {
-                this.payments = response.data;
-                this.fetchActivePlan();
-            })
-            .catch(error => {
+                .then(response => {
+                    this.payments = response.data;
+                    this.fetchActivePlan();
+                })
+                .catch(error => {
                     console.log("Emit:");
                     console.error(error);
                 });
         },
-        fetchActivePlan() {
+        async fetchActivePlan() {
             axios.get('/api/activePlans/getById/' + this.activePlan.id)
                 .then(response => {
                     this.activePlan = response.data;
                 })
                 .catch(error => {
+                    console.error(error);
+                });
+        },
+        async fetchAppointment() {
+            axios.get('/api/activePlans/appointments/' + this.activePlan.id)
+                .then(response => {
+                    console.log(response.data);
+                    this.appointments = response.data;
+                })
+                .catch(error => {
+                    console.log("Emit:");
                     console.error(error);
                 });
         },
@@ -163,6 +211,7 @@ export default {
         this.fetchActivePlanStudents();
         this.fetchStudents();
         this.fetchPayments();
+        this.fetchAppointment();
     },
 }
 </script>
