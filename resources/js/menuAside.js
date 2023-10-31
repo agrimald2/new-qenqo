@@ -28,7 +28,7 @@ export default [
     label: "Dashboard",
   },
   {
-    href: "/activePlans",
+    href: "/appointments",
     label: "Clases",
     icon: mdiViewList,
   },

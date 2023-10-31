@@ -50,6 +50,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/myProfile', [UserController::class, 'myProfile']);
     
     Route::get('/activePlanAppointments/{id}', [ActivePlanAppointmentController::class, 'show']);
+    
+    Route::get('/appointments', [ActivePlanAppointmentController::class, 'index'])->name('appointments.index');
 });
 
 require __DIR__.'/auth.php';

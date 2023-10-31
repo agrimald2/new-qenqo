@@ -38,4 +38,9 @@ class ActivePlan extends Model
     {
         return $this->hasMany(ActivePlanAppointment::class);
     }
+
+    public function trainers()
+    {
+        return $this->belongsToMany(Student::class, 'active_plan_students');
+    }
 }

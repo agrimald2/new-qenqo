@@ -15,4 +15,9 @@ class Trainer extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function activePlans()
+    {
+        return $this->belongsToMany(ActivePlan::class, 'active_plan_students');
+    }
 }

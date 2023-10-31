@@ -7,9 +7,10 @@ import BaseButton from "@/Components/BaseButton.vue";
 import { mdiPlusCircle } from "@mdi/js";
 import CardBoxWidget from "@/Components/CardBoxWidget.vue";
 import CardBox from "@/Components/CardBox.vue";
-import FormField from "@/components/FormField.vue";
-import FormControl from "@/components/FormControl.vue";
+import FormField from "@/Components/FormField.vue";
+import FormControl from "@/Components/FormControl.vue";
 import PillTag from "@/Components/PillTag.vue";
+import Qr from './Qr.vue';
 </script>
 <template>
     <LayoutAuthenticated>
@@ -17,16 +18,16 @@ import PillTag from "@/Components/PillTag.vue";
         <Head title="Clase" />
         <SectionMain>
             <SectionTitleLineWithButton :title="appointment.status + ' - ' + appointment.active_plan.name" />
-            <CardBox class="mb-2">
-                <h3 class="font-bold text-xl">
-                    {{ appointment.date }} de {{ appointment.start_time }} al {{ appointment.end_time }}
-                </h3>
-                <!--
-                <progress class="flex w-2/5 self-center lg:w-full"
-                    :max="Math.floor((new Date(activePlan.end_date) - new Date(activePlan.start_date)) / (1000 * 60 * 60 * 24))"
-                    :value="Ma
-                    -->
-            </CardBox>
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
+                <CardBox class="mb-2">
+                    <h3 class="font-bold text-xl">
+                        {{ appointment.date }} de {{ appointment.start_time }} al {{ appointment.end_time }}
+                    </h3>
+                </CardBox>
+                <CardBox class="center">
+                    <Qr text="Hello world!" />
+                </CardBox>
+            </div>
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-4 mb-6">
                 <CardBoxWidget :trend="'de ' + appointment.assistances.length" trend-type="up" color="text-blue-500"
                     :icon="mdiCartOutline" :number="0" prefix="" label="Confirmados" />
@@ -53,7 +54,7 @@ export default {
 
         }
     },
-    components: [StudentsTable],
+    components: [StudentsTable, Qr],
     methods: {
 
     },

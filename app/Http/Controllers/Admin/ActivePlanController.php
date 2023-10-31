@@ -18,9 +18,7 @@ class ActivePlanController extends Controller
     public function index(){
         return Inertia::render('ActivePlan/Index');
     }
-
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $user = Auth::user();
         
         // Validate the request data
@@ -57,18 +55,14 @@ class ActivePlanController extends Controller
         // Return the created active plan
         return response()->json($activePlan, 201);
     }
-
-    public function getActivePlans()
-    {
+    public function getActivePlans(){
         $activePlans = ActivePlan::all();
         return response()->json($activePlans);
     }
-
     public function show($id){
         $activePlan = ActivePlan::find($id);
         return Inertia::render('ActivePlan/Show', ['activePlan' => $activePlan]);
     }
-
     public function getActivePlanById($id){
         $activePlan = ActivePlan::find($id);
         return response()->json($activePlan, 200);
@@ -99,7 +93,6 @@ class ActivePlanController extends Controller
         // Return the created ActivePlanStudents record
         return response()->json($activePlanStudent, 201);
     }
-
     public function removeStudentFromActivePlan(Request $request){
         // Validate the request data
         $validatedData = $request->validate([
@@ -121,9 +114,7 @@ class ActivePlanController extends Controller
         // Return a response
         return response()->json(['message' => 'Student removed from active plan'], 200);
     }
-
-    public function getStudentsOfActivePlan($id)
-    {
+    public function getStudentsOfActivePlan($id){
         // Find the ActivePlan with the given id
         $activePlan = ActivePlan::find($id);
 
@@ -150,9 +141,7 @@ class ActivePlanController extends Controller
         // If the ActivePlan does not exist, return a 404 response
         return response()->json(['message' => 'ActivePlan not found'], 404);
     }
-
-    public function getActivePlanAppointments($id)
-    {
+    public function getActivePlanAppointments($id){
         Log::debug($id);
         // Find the ActivePlan with the given id
         $activePlan = ActivePlan::find($id);
@@ -166,6 +155,85 @@ class ActivePlanController extends Controller
 
         // If the ActivePlan does not exist, return a 404 response
         return response()->json(['message' => 'ActivePlan not found'], 404);
+    }
+    public function addTrainerToActivePlan(){
+         // Validate the request data
+         $validatedData = $request->validate([
+            'active_plan_id' => 'required|exists:active_plans,id',
+            'trainer_id' => 'required',
+        ]);
+
+        // Check if the student is already linked to the active plan
+        $existingActivePlanTrainer = ActivePlanTrainers::where('active_plan_id', $validatedData['active_plan_id'])
+            ->where('trainer_id', $validatedData['trainer_id'])
+            ->first();
+
+        // If the student is already linked, return an error message
+        if ($existingActivePlanTrainer) {
+            return response()->json(['message' => 'Trainer is already linked to this active plan'], 400);
+        }
+
+        // Create a new ActivePlanStudents record with the validated data
+        $activePlanTrainer = ActivePlanTrainers::create([
+            'active_plan_id' => $validatedData['active_plan_id'],
+            'trainer_id' => $validatedData['trainer_id'],
+        ]);
+
+        // Return the created ActivePlanStudents record
+        return response()->json($activePlanTrainer, 201);
+    }
+    public function removeTrainerFromActivePlan(){
+        // Validate the request data
+        $validatedData = $request->validate([
+            'active_plan_id' => 'required|exists:active_plans,id',
+            'trainer_id' => 'required',
+        ]);
+
+        // Find the ActivePlanTrainers record with the validated data
+        $activePlanTrainer = ActivePlanTrainers::where('active_plan_id', $validatedData['active_plan_id'])
+            ->where('trainer_id', $validatedData['trainer_id'])
+            ->first();
+
+
+        // If the record exists, delete it
+        if($activePlanTrainer){
+            $activePlanTrainer->delete();
+        }
+
+        // Return a response
+        return response()->json(['message' => 'Trainer removed from active plan'], 200);
+    }
+    public function getTrainersOfActivePlan($id){
+        // Find the ActivePlan with the given id
+        $activePlan = ActivePlan::find($id);
+
+        // If the ActivePlan exists, get its trainers
+        if ($activePlan) {
+            $trainers = $activePlan->trainer;
+            // Get the user information for each trainer
+            $information = [];
+            foreach ($trainers as $trainer) {
+                $user = $trainer->user;
+                $information[] = [
+                    'id' => $trainer->id,
+                    'name' => $user->name,
+                    'dni' => $user->dni,
+                    'phone' => $user->phone,
+                    'username' => $user->username,
+                    // Add other desired user information fields here
+                ];
+            }
+
+            return response()->json($userInformation, 200);
+        }
+
+        // If the ActivePlan does not exist, return a 404 response
+        return response()->json(['message' => 'ActivePlan not found'], 404);
+    }
+    public function deleteActivePlan(){
+        //delete ActivePLan
+        //delete ActivePlanStudents
+        //delete ActivePlanPayments
     }
 
 }

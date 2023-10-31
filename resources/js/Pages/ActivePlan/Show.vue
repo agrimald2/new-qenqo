@@ -7,8 +7,8 @@ import BaseButton from "@/Components/BaseButton.vue";
 import { mdiPlusCircle } from "@mdi/js";
 import CardBoxWidget from "@/Components/CardBoxWidget.vue";
 import CardBox from "@/Components/CardBox.vue";
-import FormField from "@/components/FormField.vue";
-import FormControl from "@/components/FormControl.vue";
+import FormField from "@/Components/FormField.vue";
+import FormControl from "@/Components/FormControl.vue";
 import PillTag from "@/Components/PillTag.vue";
 </script>
 <template>

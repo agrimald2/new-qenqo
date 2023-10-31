@@ -78,3 +78,6 @@ Route::put('/student/{id}/updateRefferedBy', [StudentController::class, 'updateR
 Route::get('/activePlans/appointments/{id}', [ActivePlanController::class, 'getActivePlanAppointments']);
 
 Route::post('/activePlanAppointments', [ActivePlanAppointmentController::class, 'store']);
+
+
+Route::get('/getAppointments', [ActivePlanAppointmentController::class, 'getAppointments']);
