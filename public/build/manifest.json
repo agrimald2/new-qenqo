@@ -1,121 +1,142 @@
 {
-  "_BaseButton-6ed89792.js": {
-    "file": "assets/BaseButton-6ed89792.js",
+  "_BaseButton-e8161602.js": {
+    "file": "assets/BaseButton-e8161602.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_BaseButtons-ae752e25.js": {
-    "file": "assets/BaseButtons-ae752e25.js",
+  "_BaseButtons-f1706410.js": {
+    "file": "assets/BaseButtons-f1706410.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_BaseDivider-145786df.js": {
-    "file": "assets/BaseDivider-145786df.js",
+  "_BaseDivider-ad61b49e.js": {
+    "file": "assets/BaseDivider-ad61b49e.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_BaseLevel-39bb96ac.js": {
-    "file": "assets/BaseLevel-39bb96ac.js",
+  "_BaseLevel-264dcdda.js": {
+    "file": "assets/BaseLevel-264dcdda.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_CardBox-325a539e.js": {
-    "file": "assets/CardBox-325a539e.js",
+  "_CardBox-ec8fd3b2.js": {
+    "file": "assets/CardBox-ec8fd3b2.js",
     "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_CardBoxModal-2d3dcbc8.js": {
-    "file": "assets/CardBoxModal-2d3dcbc8.js",
+  "_CardBoxModal-f606295c.js": {
+    "file": "assets/CardBoxModal-f606295c.js",
     "imports": [
       "resources/js/app.js",
-      "_mdi-7f5f296a.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseButtons-ae752e25.js",
-      "_CardBox-325a539e.js",
-      "_OverlayLayer-1bc04f10.js"
+      "_mdi-6108fd70.js",
+      "_BaseButton-e8161602.js",
+      "_BaseButtons-f1706410.js",
+      "_CardBox-ec8fd3b2.js",
+      "_OverlayLayer-2858f6d1.js"
     ]
   },
-  "_CardBoxWidget-c27bef13.js": {
-    "file": "assets/CardBoxWidget-c27bef13.js",
+  "_CardBoxWidget-505863a3.js": {
+    "file": "assets/CardBoxWidget-505863a3.js",
     "imports": [
-      "_mdi-7f5f296a.js",
-      "_CardBox-325a539e.js",
-      "_numeral-68028780.js",
+      "_mdi-6108fd70.js",
+      "_CardBox-ec8fd3b2.js",
+      "_numeral-fb3f3e0b.js",
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseLevel-39bb96ac.js",
-      "_PillTag-02e13e6e.js"
+      "_BaseButton-e8161602.js",
+      "_BaseLevel-264dcdda.js",
+      "_PillTag-89f52d05.js"
     ]
   },
-  "_FormCheckRadio-091af855.js": {
-    "file": "assets/FormCheckRadio-091af855.js",
+  "_FormCheckRadio-e4d85196.js": {
+    "file": "assets/FormCheckRadio-e4d85196.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_FormCheckRadioGroup-67080474.js": {
-    "file": "assets/FormCheckRadioGroup-67080474.js",
+  "_FormCheckRadioGroup-e641e288.js": {
+    "file": "assets/FormCheckRadioGroup-e641e288.js",
     "imports": [
-      "_FormCheckRadio-091af855.js",
+      "_FormCheckRadio-e4d85196.js",
       "resources/js/app.js"
     ]
   },
-  "_FormControl-572480f0.js": {
-    "file": "assets/FormControl-572480f0.js",
+  "_FormControl-e30ddae7.js": {
+    "file": "assets/FormControl-e30ddae7.js",
     "imports": [
       "resources/js/app.js",
-      "_main-d5a75c4a.js",
-      "_BaseButton-6ed89792.js"
+      "_main-974464e4.js",
+      "_BaseButton-e8161602.js"
     ]
   },
-  "_FormField-8338db07.js": {
-    "file": "assets/FormField-8338db07.js",
+  "_FormField-6ab93971.js": {
+    "file": "assets/FormField-6ab93971.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_FormValidationErrors-3ff9fe60.js": {
-    "file": "assets/FormValidationErrors-3ff9fe60.js",
+  "_FormValidationErrors-8d298808.js": {
+    "file": "assets/FormValidationErrors-8d298808.js",
     "imports": [
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js"
+      "_BaseButton-e8161602.js"
     ]
   },
-  "_OverlayLayer-1bc04f10.js": {
-    "file": "assets/OverlayLayer-1bc04f10.js",
-    "imports": [
-      "resources/js/app.js"
-    ]
-  },
-  "_PillTag-02e13e6e.js": {
-    "file": "assets/PillTag-02e13e6e.js",
-    "imports": [
-      "_BaseButton-6ed89792.js",
-      "resources/js/app.js"
-    ]
-  },
-  "_SectionTitleLineWithButton-d9214d76.js": {
-    "file": "assets/SectionTitleLineWithButton-d9214d76.js",
+  "_LayoutAuthenticated-7a9c7881.js": {
+    "file": "assets/LayoutAuthenticated-7a9c7881.js",
     "imports": [
       "resources/js/app.js",
-      "_mdi-7f5f296a.js",
-      "_main-d5a75c4a.js",
-      "_BaseButton-6ed89792.js",
-      "_FormControl-572480f0.js",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_BaseLevel-39bb96ac.js"
+      "_mdi-6108fd70.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_main-974464e4.js",
+      "_BaseButton-e8161602.js",
+      "_FormControl-e30ddae7.js"
     ]
   },
-  "_UserAvatar-925a527e.js": {
-    "file": "assets/UserAvatar-925a527e.js",
+  "_OverlayLayer-2858f6d1.js": {
+    "file": "assets/OverlayLayer-2858f6d1.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_PillTag-89f52d05.js": {
+    "file": "assets/PillTag-89f52d05.js",
+    "imports": [
+      "_BaseButton-e8161602.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_SectionTitleLineWithButton-7a4d7e88.js": {
+    "file": "assets/SectionTitleLineWithButton-7a4d7e88.js",
+    "imports": [
+      "resources/js/app.js",
+      "_mdi-6108fd70.js",
+      "_BaseButton-e8161602.js",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js"
+    ]
+  },
+  "_StudentsLayout-8d511d36.js": {
+    "file": "assets/StudentsLayout-8d511d36.js",
+    "imports": [
+      "resources/js/app.js",
+      "_mdi-6108fd70.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_main-974464e4.js",
+      "_BaseButton-e8161602.js",
+      "_FormControl-e30ddae7.js"
+    ]
+  },
+  "_UserAvatar-8a32cd0d.js": {
+    "file": "assets/UserAvatar-8a32cd0d.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -123,581 +144,1136 @@
   "__plugin-vue_export-helper-c27b6911.js": {
     "file": "assets/_plugin-vue_export-helper-c27b6911.js"
   },
-  "_main-d5a75c4a.js": {
-    "file": "assets/main-d5a75c4a.js",
+  "_chart.config-59b0b5a2.js": {
+    "file": "assets/chart.config-59b0b5a2.js"
+  },
+  "_main-974464e4.js": {
+    "file": "assets/main-974464e4.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_mdi-7f5f296a.js": {
-    "file": "assets/mdi-7f5f296a.js"
+  "_mdi-6108fd70.js": {
+    "file": "assets/mdi-6108fd70.js"
   },
-  "_numeral-68028780.js": {
-    "file": "assets/numeral-68028780.js",
+  "_numeral-fb3f3e0b.js": {
+    "file": "assets/numeral-fb3f3e0b.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_qrcode.vue.esm-686c2076.js": {
+    "file": "assets/qrcode.vue.esm-686c2076.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
   "resources/js/Pages/ActivePlan/Create.vue": {
-    "file": "assets/Create-439a100f.js",
+    "file": "assets/Create-0b20ce9d.js",
     "imports": [
-      "_CardBox-325a539e.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ActivePlan/Create.vue"
   },
   "resources/js/Pages/ActivePlan/Index.vue": {
-    "file": "assets/Index-895dfd5c.js",
+    "file": "assets/Index-d8997617.js",
     "imports": [
-      "_SectionTitleLineWithButton-d9214d76.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
       "resources/js/Pages/ActivePlan/Create.vue",
       "resources/js/Pages/ActivePlan/Table.vue",
-      "_main-d5a75c4a.js",
-      "_FormControl-572480f0.js",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_BaseLevel-39bb96ac.js",
-      "_CardBox-325a539e.js",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_FormField-8338db07.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseButtons-ae752e25.js",
-      "_PillTag-02e13e6e.js"
+      "_FormField-6ab93971.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js",
+      "_PillTag-89f52d05.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ActivePlan/Index.vue"
   },
   "resources/js/Pages/ActivePlan/Show.vue": {
-    "file": "assets/Show-6f0c7bef.js",
+    "file": "assets/Show-54104f24.js",
     "imports": [
-      "_SectionTitleLineWithButton-d9214d76.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_CardBoxWidget-c27bef13.js",
-      "_CardBox-325a539e.js",
-      "_FormControl-572480f0.js",
-      "_PillTag-02e13e6e.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxWidget-505863a3.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormControl-e30ddae7.js",
+      "_PillTag-89f52d05.js",
       "resources/js/Pages/Students/Create.vue",
       "resources/js/Pages/ActivePlanPayment/Create.vue",
       "resources/js/Pages/Students/List.vue",
       "resources/js/Pages/ActivePlanPayment/List.vue",
-      "_main-d5a75c4a.js",
+      "_main-974464e4.js",
       "resources/js/Pages/Appointment/Table.vue",
       "resources/js/Pages/Appointment/Create.vue",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_BaseLevel-39bb96ac.js",
-      "_numeral-68028780.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_numeral-fb3f3e0b.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_FormField-8338db07.js",
-      "_BaseButtons-ae752e25.js",
-      "_CardBoxModal-2d3dcbc8.js"
+      "_FormField-6ab93971.js",
+      "_BaseButtons-f1706410.js",
+      "_CardBoxModal-f606295c.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ActivePlan/Show.vue"
   },
   "resources/js/Pages/ActivePlan/Table.vue": {
-    "file": "assets/Table-142389de.js",
+    "file": "assets/Table-f7b65b0e.js",
     "imports": [
       "resources/js/app.js",
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseLevel-39bb96ac.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_PillTag-02e13e6e.js",
-      "_CardBox-325a539e.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_OverlayLayer-1bc04f10.js"
+      "_OverlayLayer-2858f6d1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ActivePlan/Table.vue"
   },
   "resources/js/Pages/ActivePlanPayment/Create.vue": {
-    "file": "assets/Create-05789418.js",
+    "file": "assets/Create-1e8a149f.js",
     "imports": [
-      "_CardBox-325a539e.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ActivePlanPayment/Create.vue"
   },
   "resources/js/Pages/ActivePlanPayment/List.vue": {
-    "file": "assets/List-9001470b.js",
+    "file": "assets/List-5ba75464.js",
     "imports": [
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ActivePlanPayment/List.vue"
   },
   "resources/js/Pages/Appointment/AppointmentsTable.vue": {
-    "file": "assets/AppointmentsTable-a85a19ba.js",
+    "file": "assets/AppointmentsTable-64e99783.js",
     "imports": [
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseLevel-39bb96ac.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_PillTag-02e13e6e.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
       "resources/js/app.js",
-      "_CardBox-325a539e.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_OverlayLayer-1bc04f10.js"
+      "_OverlayLayer-2858f6d1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/AppointmentsTable.vue"
   },
   "resources/js/Pages/Appointment/Create.vue": {
-    "file": "assets/Create-8bcaeb2d.js",
+    "file": "assets/Create-2a85dc9b.js",
     "imports": [
-      "_CardBox-325a539e.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/Create.vue"
   },
   "resources/js/Pages/Appointment/Index.vue": {
-    "file": "assets/Index-25c75cb5.js",
+    "file": "assets/Index-a90df3e3.js",
     "imports": [
-      "_SectionTitleLineWithButton-d9214d76.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_CardBox-325a539e.js",
-      "_numeral-68028780.js",
-      "_FormControl-572480f0.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_CardBox-ec8fd3b2.js",
+      "_numeral-fb3f3e0b.js",
+      "_FormControl-e30ddae7.js",
       "resources/js/Pages/Appointment/AppointmentsTable.vue",
-      "_main-d5a75c4a.js",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_BaseLevel-39bb96ac.js",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseButtons-ae752e25.js",
-      "_PillTag-02e13e6e.js"
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js",
+      "_PillTag-89f52d05.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/Index.vue"
   },
   "resources/js/Pages/Appointment/Qr.vue": {
-    "file": "assets/Qr-eec6dcc2.js",
+    "file": "assets/Qr-9e31729b.js",
     "imports": [
-      "resources/js/app.js",
-      "__plugin-vue_export-helper-c27b6911.js"
+      "_qrcode.vue.esm-686c2076.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/Qr.vue"
   },
   "resources/js/Pages/Appointment/Show.vue": {
-    "file": "assets/Show-95cb0eb4.js",
+    "file": "assets/Show-f5417aca.js",
     "imports": [
-      "_SectionTitleLineWithButton-d9214d76.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js",
-      "_CardBoxWidget-c27bef13.js",
-      "_CardBox-325a539e.js",
-      "_main-d5a75c4a.js",
+      "_BaseButton-e8161602.js",
+      "_CardBoxWidget-505863a3.js",
+      "_CardBox-ec8fd3b2.js",
+      "_main-974464e4.js",
       "resources/js/Pages/Appointment/Qr.vue",
       "resources/js/Pages/Appointment/StudentsTable.vue",
-      "_mdi-7f5f296a.js",
-      "_FormControl-572480f0.js",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_BaseLevel-39bb96ac.js",
-      "_numeral-68028780.js",
-      "_PillTag-02e13e6e.js",
+      "_mdi-6108fd70.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_numeral-fb3f3e0b.js",
+      "_PillTag-89f52d05.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseButtons-ae752e25.js"
+      "_qrcode.vue.esm-686c2076.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/Show.vue"
   },
   "resources/js/Pages/Appointment/StudentsTable.vue": {
-    "file": "assets/StudentsTable-f2d9f59b.js",
+    "file": "assets/StudentsTable-118c7742.js",
     "imports": [
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseLevel-39bb96ac.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_PillTag-02e13e6e.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
       "resources/js/app.js",
-      "_CardBox-325a539e.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_OverlayLayer-1bc04f10.js"
+      "_OverlayLayer-2858f6d1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/StudentsTable.vue"
   },
   "resources/js/Pages/Appointment/Table.vue": {
-    "file": "assets/Table-45600b62.js",
+    "file": "assets/Table-23cb367c.js",
     "imports": [
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseLevel-39bb96ac.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_PillTag-02e13e6e.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
       "resources/js/app.js",
-      "_CardBox-325a539e.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_OverlayLayer-1bc04f10.js"
+      "_OverlayLayer-2858f6d1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/Table.vue"
   },
   "resources/js/Pages/Auth/ConfirmPassword.vue": {
-    "file": "assets/ConfirmPassword-afb13134.js",
+    "file": "assets/ConfirmPassword-dc2287db.js",
     "imports": [
       "resources/js/app.js",
-      "_FormValidationErrors-3ff9fe60.js",
-      "_CardBox-325a539e.js",
-      "_FormControl-572480f0.js",
-      "_FormField-8338db07.js",
-      "_BaseDivider-145786df.js",
-      "_BaseButton-6ed89792.js",
+      "_FormValidationErrors-8d298808.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormControl-e30ddae7.js",
+      "_FormField-6ab93971.js",
+      "_BaseDivider-ad61b49e.js",
+      "_BaseButton-e8161602.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ConfirmPassword.vue"
   },
   "resources/js/Pages/Auth/ForgotPassword.vue": {
-    "file": "assets/ForgotPassword-6d0f1210.js",
+    "file": "assets/ForgotPassword-741a55e5.js",
     "imports": [
       "resources/js/app.js",
-      "_mdi-7f5f296a.js",
-      "_FormValidationErrors-3ff9fe60.js",
-      "_CardBox-325a539e.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
-      "_BaseDivider-145786df.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseLevel-39bb96ac.js",
+      "_mdi-6108fd70.js",
+      "_FormValidationErrors-8d298808.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "_BaseDivider-ad61b49e.js",
+      "_BaseButton-e8161602.js",
+      "_BaseLevel-264dcdda.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ForgotPassword.vue"
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login-ab3575c5.js",
+    "file": "assets/Login-db9d34b1.js",
     "imports": [
       "resources/js/app.js",
-      "_mdi-7f5f296a.js",
-      "_FormValidationErrors-3ff9fe60.js",
-      "_CardBox-325a539e.js",
-      "_FormCheckRadioGroup-67080474.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
-      "_BaseDivider-145786df.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseLevel-39bb96ac.js",
+      "_mdi-6108fd70.js",
+      "_FormValidationErrors-8d298808.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormCheckRadioGroup-e641e288.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "_BaseDivider-ad61b49e.js",
+      "_BaseButton-e8161602.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseLevel-264dcdda.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_FormCheckRadio-091af855.js",
-      "_main-d5a75c4a.js"
+      "_FormCheckRadio-e4d85196.js",
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.vue"
   },
   "resources/js/Pages/Auth/Register.vue": {
-    "file": "assets/Register-b7cb3d1b.js",
+    "file": "assets/Register-b96df396.js",
     "imports": [
       "resources/js/app.js",
-      "_mdi-7f5f296a.js",
-      "_FormValidationErrors-3ff9fe60.js",
-      "_CardBox-325a539e.js",
-      "_FormCheckRadioGroup-67080474.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
-      "_BaseDivider-145786df.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseButtons-ae752e25.js",
+      "_mdi-6108fd70.js",
+      "_FormValidationErrors-8d298808.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormCheckRadioGroup-e641e288.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "_BaseDivider-ad61b49e.js",
+      "_BaseButton-e8161602.js",
+      "_BaseButtons-f1706410.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_FormCheckRadio-091af855.js",
-      "_main-d5a75c4a.js"
+      "_FormCheckRadio-e4d85196.js",
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Register.vue"
   },
   "resources/js/Pages/Auth/ResetPassword.vue": {
-    "file": "assets/ResetPassword-59e54059.js",
+    "file": "assets/ResetPassword-2d483833.js",
     "imports": [
       "resources/js/app.js",
-      "_mdi-7f5f296a.js",
-      "_FormValidationErrors-3ff9fe60.js",
-      "_CardBox-325a539e.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
-      "_BaseDivider-145786df.js",
-      "_BaseButton-6ed89792.js",
+      "_mdi-6108fd70.js",
+      "_FormValidationErrors-8d298808.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "_BaseDivider-ad61b49e.js",
+      "_BaseButton-e8161602.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ResetPassword.vue"
   },
   "resources/js/Pages/Auth/TwoFactorChallenge.vue": {
-    "file": "assets/TwoFactorChallenge-5075418d.js",
+    "file": "assets/TwoFactorChallenge-43fd10ad.js",
     "imports": [
       "resources/js/app.js",
-      "_FormValidationErrors-3ff9fe60.js",
-      "_CardBox-325a539e.js",
-      "_FormControl-572480f0.js",
-      "_FormField-8338db07.js",
-      "_BaseDivider-145786df.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseLevel-39bb96ac.js",
+      "_FormValidationErrors-8d298808.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormControl-e30ddae7.js",
+      "_FormField-6ab93971.js",
+      "_BaseDivider-ad61b49e.js",
+      "_BaseButton-e8161602.js",
+      "_BaseLevel-264dcdda.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/TwoFactorChallenge.vue"
   },
   "resources/js/Pages/Auth/VerifyEmail.vue": {
-    "file": "assets/VerifyEmail-419bcb58.js",
+    "file": "assets/VerifyEmail-9fce0cb5.js",
     "imports": [
       "resources/js/app.js",
-      "_FormValidationErrors-3ff9fe60.js",
-      "_CardBox-325a539e.js",
-      "_FormField-8338db07.js",
-      "_BaseDivider-145786df.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseLevel-39bb96ac.js",
+      "_FormValidationErrors-8d298808.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormField-6ab93971.js",
+      "_BaseDivider-ad61b49e.js",
+      "_BaseButton-e8161602.js",
+      "_BaseLevel-264dcdda.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/VerifyEmail.vue"
   },
+  "resources/js/Pages/DiscountCode/Create.vue": {
+    "file": "assets/Create-289a0502.js",
+    "imports": [
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_main-974464e4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/DiscountCode/Create.vue"
+  },
+  "resources/js/Pages/DiscountCode/Index.vue": {
+    "file": "assets/Index-ec3d1b01.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/Pages/DiscountCode/Create.vue",
+      "resources/js/Pages/DiscountCode/Table.vue",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/DiscountCode/Index.vue"
+  },
+  "resources/js/Pages/DiscountCode/List.vue": {
+    "file": "assets/List-4f5c66b8.js",
+    "imports": [
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/DiscountCode/List.vue"
+  },
+  "resources/js/Pages/DiscountCode/Table.vue": {
+    "file": "assets/Table-f637e179.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "resources/js/app.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/DiscountCode/Table.vue"
+  },
   "resources/js/Pages/Family/Create.vue": {
-    "file": "assets/Create-bc779f36.js",
+    "file": "assets/Create-f87d82bd.js",
     "imports": [
       "resources/js/app.js",
-      "_CardBox-325a539e.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Family/Create.vue"
   },
   "resources/js/Pages/HomeView.vue": {
-    "file": "assets/HomeView-905f3476.js",
+    "file": "assets/HomeView-3698bbb9.js",
     "imports": [
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_chart.config-59b0b5a2.js",
       "resources/js/app.js",
-      "_SectionTitleLineWithButton-d9214d76.js",
-      "_CardBoxWidget-c27bef13.js",
-      "_CardBox-325a539e.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseLevel-39bb96ac.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_UserAvatar-925a527e.js",
-      "_PillTag-02e13e6e.js",
-      "_FormControl-572480f0.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_numeral-68028780.js",
-      "__plugin-vue_export-helper-c27b6911.js"
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_CardBoxWidget-505863a3.js",
+      "_CardBox-ec8fd3b2.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_PillTag-89f52d05.js",
+      "_LayoutAuthenticated-7a9c7881.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_numeral-fb3f3e0b.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_FormControl-e30ddae7.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/HomeView.vue"
   },
-  "resources/js/Pages/Rate/Create.vue": {
-    "file": "assets/Create-2d53f4be.js",
+  "resources/js/Pages/PaymentMethod/Create.vue": {
+    "file": "assets/Create-97cfb62d.js",
     "imports": [
-      "_CardBox-325a539e.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormControl-e30ddae7.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/PaymentMethod/Create.vue"
+  },
+  "resources/js/Pages/PaymentMethod/Index.vue": {
+    "file": "assets/Index-0f6eb8b1.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/Pages/PaymentMethod/Create.vue",
+      "resources/js/Pages/PaymentMethod/Table.vue",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/PaymentMethod/Index.vue"
+  },
+  "resources/js/Pages/PaymentMethod/List.vue": {
+    "file": "assets/List-6bc12f93.js",
+    "imports": [
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/PaymentMethod/List.vue"
+  },
+  "resources/js/Pages/PaymentMethod/Table.vue": {
+    "file": "assets/Table-5f30c641.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "resources/js/app.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/PaymentMethod/Table.vue"
+  },
+  "resources/js/Pages/Payments/Create.vue": {
+    "file": "assets/Create-b8211e31.js",
+    "imports": [
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_main-974464e4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Payments/Create.vue"
+  },
+  "resources/js/Pages/Payments/Index.vue": {
+    "file": "assets/Index-4128c210.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/Pages/Payments/Create.vue",
+      "resources/js/Pages/Payments/Table.vue",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Payments/Index.vue"
+  },
+  "resources/js/Pages/Payments/List.vue": {
+    "file": "assets/List-f90b4497.js",
+    "imports": [
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Payments/List.vue"
+  },
+  "resources/js/Pages/Payments/Table.vue": {
+    "file": "assets/Table-67dc27e9.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "resources/js/app.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Payments/Table.vue"
+  },
+  "resources/js/Pages/Rate/Create.vue": {
+    "file": "assets/Create-5ffd7698.js",
+    "imports": [
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Rate/Create.vue"
   },
   "resources/js/Pages/Rate/Index.vue": {
-    "file": "assets/Index-ab240cd7.js",
+    "file": "assets/Index-7d8058bc.js",
     "imports": [
-      "_SectionTitleLineWithButton-d9214d76.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
       "resources/js/Pages/Rate/Create.vue",
       "resources/js/Pages/Rate/Table.vue",
       "resources/js/Pages/Family/Create.vue",
-      "_main-d5a75c4a.js",
-      "_FormControl-572480f0.js",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_BaseLevel-39bb96ac.js",
-      "_CardBox-325a539e.js",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_FormField-8338db07.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseButtons-ae752e25.js"
+      "_FormField-6ab93971.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Rate/Index.vue"
   },
   "resources/js/Pages/Rate/Table.vue": {
-    "file": "assets/Table-edef75ad.js",
+    "file": "assets/Table-426c3d94.js",
     "imports": [
       "resources/js/app.js",
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseLevel-39bb96ac.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_UserAvatar-925a527e.js",
-      "_CardBox-325a539e.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_OverlayLayer-1bc04f10.js"
+      "_OverlayLayer-2858f6d1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Rate/Table.vue"
   },
-  "resources/js/Pages/Students/Create.vue": {
-    "file": "assets/Create-fdd7008a.js",
+  "resources/js/Pages/StudentRole/ActivePlan/Create.vue": {
+    "file": "assets/Create-aab0a5fc.js",
     "imports": [
-      "_CardBox-325a539e.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
-      "_FormControl-572480f0.js",
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_main-d5a75c4a.js"
+      "_main-974464e4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/ActivePlan/Create.vue"
+  },
+  "resources/js/Pages/StudentRole/ActivePlan/Index.vue": {
+    "file": "assets/Index-f341f834.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_StudentsLayout-8d511d36.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/Pages/StudentRole/ActivePlan/Create.vue",
+      "resources/js/Pages/StudentRole/ActivePlan/Table.vue",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_FormField-6ab93971.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js",
+      "_PillTag-89f52d05.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/ActivePlan/Index.vue"
+  },
+  "resources/js/Pages/StudentRole/ActivePlan/Show.vue": {
+    "file": "assets/Show-f578f7e5.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_StudentsLayout-8d511d36.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_CardBoxWidget-505863a3.js",
+      "_CardBox-ec8fd3b2.js",
+      "_main-974464e4.js",
+      "resources/js/Pages/StudentRole/Students/Create.vue",
+      "resources/js/Pages/StudentRole/ActivePlanPayment/Create.vue",
+      "resources/js/Pages/StudentRole/Students/List.vue",
+      "resources/js/Pages/StudentRole/ActivePlanPayment/List.vue",
+      "resources/js/Pages/StudentRole/Appointment/Table.vue",
+      "resources/js/Pages/StudentRole/Appointment/Create.vue",
+      "_mdi-6108fd70.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_numeral-fb3f3e0b.js",
+      "_PillTag-89f52d05.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_FormField-6ab93971.js",
+      "_BaseButtons-f1706410.js",
+      "_CardBoxModal-f606295c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/ActivePlan/Show.vue"
+  },
+  "resources/js/Pages/StudentRole/ActivePlan/Table.vue": {
+    "file": "assets/Table-f801aad4.js",
+    "imports": [
+      "resources/js/app.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/ActivePlan/Table.vue"
+  },
+  "resources/js/Pages/StudentRole/ActivePlanPayment/Create.vue": {
+    "file": "assets/Create-41bfe915.js",
+    "imports": [
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_main-974464e4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/ActivePlanPayment/Create.vue"
+  },
+  "resources/js/Pages/StudentRole/ActivePlanPayment/List.vue": {
+    "file": "assets/List-3e846618.js",
+    "imports": [
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/ActivePlanPayment/List.vue"
+  },
+  "resources/js/Pages/StudentRole/Appointment/AppointmentsTable.vue": {
+    "file": "assets/AppointmentsTable-ab9dfc91.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
+      "resources/js/app.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Appointment/AppointmentsTable.vue"
+  },
+  "resources/js/Pages/StudentRole/Appointment/Create.vue": {
+    "file": "assets/Create-f4a74a1f.js",
+    "imports": [
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_main-974464e4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Appointment/Create.vue"
+  },
+  "resources/js/Pages/StudentRole/Appointment/Index.vue": {
+    "file": "assets/Index-46744bbc.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_StudentsLayout-8d511d36.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_CardBox-ec8fd3b2.js",
+      "_numeral-fb3f3e0b.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/Pages/StudentRole/Appointment/AppointmentsTable.vue",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js",
+      "_PillTag-89f52d05.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Appointment/Index.vue"
+  },
+  "resources/js/Pages/StudentRole/Appointment/Qr.vue": {
+    "file": "assets/Qr-c2ea8df8.js",
+    "imports": [
+      "_qrcode.vue.esm-686c2076.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Appointment/Qr.vue"
+  },
+  "resources/js/Pages/StudentRole/Appointment/Show.vue": {
+    "file": "assets/Show-6f82463c.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_StudentsLayout-8d511d36.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxWidget-505863a3.js",
+      "_CardBox-ec8fd3b2.js",
+      "_main-974464e4.js",
+      "resources/js/Pages/StudentRole/Appointment/Qr.vue",
+      "resources/js/Pages/StudentRole/Appointment/StudentsTable.vue",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_numeral-fb3f3e0b.js",
+      "_PillTag-89f52d05.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_qrcode.vue.esm-686c2076.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Appointment/Show.vue"
+  },
+  "resources/js/Pages/StudentRole/Appointment/StudentsTable.vue": {
+    "file": "assets/StudentsTable-bd7bf596.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
+      "resources/js/app.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Appointment/StudentsTable.vue"
+  },
+  "resources/js/Pages/StudentRole/Appointment/Table.vue": {
+    "file": "assets/Table-a34a3a9f.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_PillTag-89f52d05.js",
+      "resources/js/app.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Appointment/Table.vue"
+  },
+  "resources/js/Pages/StudentRole/Home.vue": {
+    "file": "assets/Home-29b76550.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_chart.config-59b0b5a2.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_numeral-fb3f3e0b.js",
+      "_BaseButton-e8161602.js",
+      "resources/js/app.js",
+      "_StudentsLayout-8d511d36.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_mdi-6108fd70.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Home.vue"
+  },
+  "resources/js/Pages/StudentRole/Students/Create.vue": {
+    "file": "assets/Create-e50ffaa2.js",
+    "imports": [
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_main-974464e4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Students/Create.vue"
+  },
+  "resources/js/Pages/StudentRole/Students/Index.vue": {
+    "file": "assets/Index-bae4e12c.js",
+    "imports": [
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
+      "resources/js/app.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/Pages/StudentRole/Students/Create.vue",
+      "resources/js/Pages/StudentRole/Students/Table.vue",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Students/Index.vue"
+  },
+  "resources/js/Pages/StudentRole/Students/List.vue": {
+    "file": "assets/List-d2bfd75b.js",
+    "imports": [
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Students/List.vue"
+  },
+  "resources/js/Pages/StudentRole/Students/Table.vue": {
+    "file": "assets/Table-a91ab3c5.js",
+    "imports": [
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_UserAvatar-8a32cd0d.js",
+      "resources/js/app.js",
+      "_CardBox-ec8fd3b2.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_OverlayLayer-2858f6d1.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/StudentRole/Students/Table.vue"
+  },
+  "resources/js/Pages/Students/Create.vue": {
+    "file": "assets/Create-bf961cf7.js",
+    "imports": [
+      "_CardBox-ec8fd3b2.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
+      "_FormControl-e30ddae7.js",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_main-974464e4.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Students/Create.vue"
   },
   "resources/js/Pages/Students/Index.vue": {
-    "file": "assets/Index-b787aed7.js",
+    "file": "assets/Index-e12ab5e8.js",
     "imports": [
-      "_SectionTitleLineWithButton-d9214d76.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_LayoutAuthenticated-7a9c7881.js",
       "resources/js/app.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
       "resources/js/Pages/Students/Create.vue",
       "resources/js/Pages/Students/Table.vue",
-      "_main-d5a75c4a.js",
-      "_FormControl-572480f0.js",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
-      "_BaseLevel-39bb96ac.js",
-      "_CardBox-325a539e.js",
+      "_main-974464e4.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormControl-e30ddae7.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseButtons-ae752e25.js"
+      "_CardBoxModal-f606295c.js",
+      "_BaseButtons-f1706410.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Students/Index.vue"
   },
   "resources/js/Pages/Students/List.vue": {
-    "file": "assets/List-2108b12f.js",
+    "file": "assets/List-10eb7fd4.js",
     "imports": [
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_mdi-7f5f296a.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_mdi-6108fd70.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Students/List.vue"
   },
   "resources/js/Pages/Students/Table.vue": {
-    "file": "assets/Table-c4efd36e.js",
+    "file": "assets/Table-1ffe08bc.js",
     "imports": [
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
-      "_CardBoxModal-2d3dcbc8.js",
-      "_BaseLevel-39bb96ac.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseButton-6ed89792.js",
-      "_UserAvatar-925a527e.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_CardBoxModal-f606295c.js",
+      "_BaseLevel-264dcdda.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseButton-e8161602.js",
+      "_UserAvatar-8a32cd0d.js",
       "resources/js/app.js",
-      "_CardBox-325a539e.js",
+      "_CardBox-ec8fd3b2.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_OverlayLayer-1bc04f10.js"
+      "_OverlayLayer-2858f6d1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Students/Table.vue"
   },
   "resources/js/Pages/User/Profile.vue": {
-    "file": "assets/Profile-85274e1e.js",
+    "file": "assets/Profile-2db3ed67.js",
     "imports": [
       "resources/js/app.js",
-      "_main-d5a75c4a.js",
-      "_mdi-7f5f296a.js",
-      "_SectionTitleLineWithButton-d9214d76.js",
-      "_CardBox-325a539e.js",
-      "_FormField-8338db07.js",
-      "_FormControl-572480f0.js",
-      "_BaseButton-6ed89792.js",
-      "_BaseButtons-ae752e25.js",
-      "_BaseLevel-39bb96ac.js",
-      "_FormCheckRadio-091af855.js",
-      "_PillTag-02e13e6e.js",
-      "_UserAvatar-925a527e.js",
-      "_BaseDivider-145786df.js",
-      "_OverlayLayer-1bc04f10.js",
+      "_main-974464e4.js",
+      "_mdi-6108fd70.js",
+      "_SectionTitleLineWithButton-7a4d7e88.js",
+      "_CardBox-ec8fd3b2.js",
+      "_FormField-6ab93971.js",
+      "_FormControl-e30ddae7.js",
+      "_BaseButton-e8161602.js",
+      "_BaseButtons-f1706410.js",
+      "_BaseLevel-264dcdda.js",
+      "_FormCheckRadio-e4d85196.js",
+      "_PillTag-89f52d05.js",
+      "_LayoutAuthenticated-7a9c7881.js",
+      "_UserAvatar-8a32cd0d.js",
+      "_BaseDivider-ad61b49e.js",
+      "_OverlayLayer-2858f6d1.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/User/Profile.vue"
   },
   "resources/js/app.css": {
-    "file": "assets/app-44e2b869.css",
+    "file": "assets/app-b2dce739.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-44e2b869.css"
+      "assets/app-b2dce739.css"
     ],
     "dynamicImports": [
       "resources/js/Pages/ActivePlan/Create.vue",
@@ -720,18 +1296,48 @@
       "resources/js/Pages/Auth/ResetPassword.vue",
       "resources/js/Pages/Auth/TwoFactorChallenge.vue",
       "resources/js/Pages/Auth/VerifyEmail.vue",
+      "resources/js/Pages/DiscountCode/Create.vue",
+      "resources/js/Pages/DiscountCode/Index.vue",
+      "resources/js/Pages/DiscountCode/List.vue",
+      "resources/js/Pages/DiscountCode/Table.vue",
       "resources/js/Pages/Family/Create.vue",
       "resources/js/Pages/HomeView.vue",
+      "resources/js/Pages/PaymentMethod/Create.vue",
+      "resources/js/Pages/PaymentMethod/Index.vue",
+      "resources/js/Pages/PaymentMethod/List.vue",
+      "resources/js/Pages/PaymentMethod/Table.vue",
+      "resources/js/Pages/Payments/Create.vue",
+      "resources/js/Pages/Payments/Index.vue",
+      "resources/js/Pages/Payments/List.vue",
+      "resources/js/Pages/Payments/Table.vue",
       "resources/js/Pages/Rate/Create.vue",
       "resources/js/Pages/Rate/Index.vue",
       "resources/js/Pages/Rate/Table.vue",
+      "resources/js/Pages/StudentRole/ActivePlan/Create.vue",
+      "resources/js/Pages/StudentRole/ActivePlan/Index.vue",
+      "resources/js/Pages/StudentRole/ActivePlan/Show.vue",
+      "resources/js/Pages/StudentRole/ActivePlan/Table.vue",
+      "resources/js/Pages/StudentRole/ActivePlanPayment/Create.vue",
+      "resources/js/Pages/StudentRole/ActivePlanPayment/List.vue",
+      "resources/js/Pages/StudentRole/Appointment/AppointmentsTable.vue",
+      "resources/js/Pages/StudentRole/Appointment/Create.vue",
+      "resources/js/Pages/StudentRole/Appointment/Index.vue",
+      "resources/js/Pages/StudentRole/Appointment/Qr.vue",
+      "resources/js/Pages/StudentRole/Appointment/Show.vue",
+      "resources/js/Pages/StudentRole/Appointment/StudentsTable.vue",
+      "resources/js/Pages/StudentRole/Appointment/Table.vue",
+      "resources/js/Pages/StudentRole/Home.vue",
+      "resources/js/Pages/StudentRole/Students/Create.vue",
+      "resources/js/Pages/StudentRole/Students/Index.vue",
+      "resources/js/Pages/StudentRole/Students/List.vue",
+      "resources/js/Pages/StudentRole/Students/Table.vue",
       "resources/js/Pages/Students/Create.vue",
       "resources/js/Pages/Students/Index.vue",
       "resources/js/Pages/Students/List.vue",
       "resources/js/Pages/Students/Table.vue",
       "resources/js/Pages/User/Profile.vue"
     ],
-    "file": "assets/app-2f728894.js",
+    "file": "assets/app-127ad8d0.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
