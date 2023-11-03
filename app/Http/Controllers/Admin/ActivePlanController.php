@@ -43,6 +43,7 @@ class ActivePlanController extends Controller
             'rate_sessions_number' => $rate->sessions_number,
             'rate_min_people' => $rate->min_people,
             'rate_max_people' => $rate->max_people,
+            'comission' => $rate->comission,
             'start_date' => $validatedData['start_date'],
             'end_date' => $validatedData['end_date'],
             'rate_freeze_days' => $rate->max_freeze_days,

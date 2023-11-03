@@ -2,15 +2,15 @@
 import CardBoxModal from "@/Components/CardBox.vue";
 import BaseButton from "@/Components/BaseButton.vue";
 import { mdiPlusCircle } from "@mdi/js";
-import FormField from "@/components/FormField.vue";
-import FormControl from "@/components/FormControl.vue";
+import FormField from "@/Components/FormField.vue";
+import FormControl from "@/Components/FormControl.vue";
 </script>
 <template>
     <CardBoxModal :title="'Crear Tarifa'" hasCancel class="bg-gray-500 slide-in-top my-2">
         <FormField label="Elije la tarifa">
             <FormControl :icon="mdiPlusCircle" type="select" :options="rates_options" v-model="activePlan.rate_id"
                 @change="updateSelectedRate" />
-            <FormControl :icon="mdiPlusCircle" placeholder="Nombre de la tarifa" v-model="activePlan.name" />
+            <FormControl :icon="mdiPlusCircle" placeholder="Nombre del Grupo" v-model="activePlan.name" />
             <div class="grid sm:grid-cols-3 col gap-4" v-if="selectedRate">
                 <FormField :help="'MIN: ' + selectedRate.min_people + ' - MAX: ' + selectedRate.max_people"
                     @change="updatePeopleNumber">

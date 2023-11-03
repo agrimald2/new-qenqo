@@ -85,6 +85,7 @@ export default {
                     "Estudiante": payment.student.user ? payment.student.user.name : "no",
                     "Plan": payment.active_plan.rate_name,
                     "Pagado": payment.total_payed,
+                    "Comision": payment.active_plan.comission,
                 };
                 return formattedPayment;
             });

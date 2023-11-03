@@ -2,25 +2,24 @@
 import { computed, ref, watchEffect } from "vue";
 import axios from 'axios';
 import { useMainStore } from "@/Stores/main";
-import { mdiEye, mdiTrashCan } from "@mdi/js";
+import { mdiEye, mdiTrashCan, mdiDrawPen } from "@mdi/js";
 import CardBoxModal from "@/Components/CardBoxModal.vue";
 import TableCheckboxCell from "@/Components/TableCheckboxCell.vue";
 import BaseLevel from "@/Components/BaseLevel.vue";
 import BaseButtons from "@/Components/BaseButtons.vue";
 import BaseButton from "@/Components/BaseButton.vue";
 import UserAvatar from "@/Components/UserAvatar.vue";
-import PillTag from "@/Components/PillTag.vue";
 
 const props = defineProps({
     checkable: Boolean,
-    activePlans: Array
+    trainers: Array
 });
 const rateToDelete = ref(null);
 
 let items = ref([]);
 
 watchEffect(() => {
-    items.value = props.activePlans;
+    items.value = props.trainers;
 });
 
 const isModalActive = ref(false);
@@ -92,23 +91,13 @@ const openDeleteModal = (rate) => {
     isModalDangerActive.value = true;
 };
 
-const deleteRate = () => {
-    axios.delete(`/api/rates/${rateToDelete.value.id}`)
-        .then(() => {
-            // handle success, e.g. remove the rate from the rates array
-            fetchRates();
-        })
-        .catch(error => {
-            // handle error, e.g. show an error message
-        });
-};
 </script>
 
 
 <template>
-    <CardBoxModal v-model="isModalDangerActive" title="Eliminar Tarifa" button="danger" buttonLabel="Eliminar" has-cancel
+    <CardBoxModal v-model="isModalDangerActive" title="Eliminar Alumno" button="danger" buttonLabel="Eliminar" has-cancel
         @confirm="deleteRate">
-        <p>Are you sure you want to delete this rate?</p>
+        <p>Are you sure you want to delete this trainer?</p>
     </CardBoxModal>
     <div v-if="checkedRows.length" class="p-3 bg-gray-100/50 dark:bg-slate-800">
         <span v-for="checkedRow in checkedRows" :key="checkedRow.id"
@@ -120,45 +109,31 @@ const deleteRate = () => {
         <thead>
             <tr>
                 <th v-if="checkable" />
-                <th>Nombre Grupo</th>
-                <th>Tarifa</th>
-                <th>Inicio</th>
-                <th>Fin</th>
-                <th>Progreso</th>
-                <th>Estado</th>
+                <th />
+                <th>Nombre</th>
+                <th>Celular</th>
+                <th>DNI</th>
                 <th>Acciones</th>
                 <th />
             </tr>
         </thead>
         <tbody>
             <tr v-for="item in itemsPaginated" :key="item.id">
+                <td class="border-b-0 lg:w-6 before:hidden">
+                    <UserAvatar :username="item.name" class="w-24 h-24 mx-auto lg:w-6 lg:h-6" />
+                </td>
                 <td data-label="Name">
-                    {{ item.name }}
+                    {{ item.user.name }}
                 </td>
-                <td data-label="Company">
-                    {{ item.rate_name }} <br>
-                    {{ item.rate_sessions_number }} Sesiones
+                <td data-label="Celular">
+                    {{ item.user.phone }}
                 </td>
-                <td data-label="City">
-                    {{ item.start_date }}
-                </td>
-                <td data-label="Progress" class="lg:w-32">
-                    {{ item.end_date }}
-                </td>
-                <td data-label="Created" class="lg:w-1 whitespace-nowrap">
-                    <progress class="flex w-2/5 self-center lg:w-full" 
-                        :max="Math.floor((new Date(item.end_date) - new Date(item.start_date)) / (1000 * 60 * 60 * 24))" 
-                        :value="Math.floor((new Date() - new Date(item.start_date)) / (1000 * 60 * 60 * 24))">
-                    </progress>
-                </td>
-                <td data-label="City">
-                    <PillTag color="success" label="En curso" :small="pillsSmall" :outline="pillsOutline"
-                        :icon="pillsIcon" />
+                <td data-label="DNI">
+                    {{ item.user.dni }}
                 </td>
                 <td class="before:hidden lg:w-1 whitespace-nowrap">
                     <BaseButtons type="justify-start lg:justify-end" no-wrap>
-                        <BaseButton color="info" :icon="mdiEye" small :href="'/students/showActivePlan/'+item.id"/>
-                        <BaseButton color="danger" :icon="mdiTrashCan" small @click="() => openDeleteModal(item)" />
+                        <BaseButton color="warning" :icon="mdiDrawPen" small :href="'user/'+item.user_id" />
                     </BaseButtons>
                 </td>
             </tr>

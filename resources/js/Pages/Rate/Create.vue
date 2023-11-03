@@ -1,9 +1,9 @@
 <script setup>
 import CardBoxModal from "@/Components/CardBox.vue";
 import BaseButton from "@/Components/BaseButton.vue";
-import { mdiPlusCircle } from "@mdi/js";
-import FormField from "@/components/FormField.vue";
-import FormControl from "@/components/FormControl.vue";
+import { mdiPlusCircle, mdiLabelPercent } from "@mdi/js";
+import FormField from "@/Components/FormField.vue";
+import FormControl from "@/Components/FormControl.vue";
 </script>
 <template>
     <CardBoxModal :title="'Crear Tarifa'" hasCancel class="bg-gray-500 slide-in-top my-2">
@@ -30,13 +30,16 @@ import FormControl from "@/components/FormControl.vue";
             </div>
         </FormField>
         <FormField label="Tipo de precio de tarifa" help="Elige el tipo de tarifa">
-            <div class="grid sm:grid-cols-4 col gap-4">
+            <div class="grid sm:grid-cols-5 col gap-4">
                 <div>
                     <FormControl :icon="mdiPlusCircle" placeholder="N° Sesiones" type="select" :options="rate_types"
                         v-model="rate.rate_type_id" />
                 </div>
                 <div>
                     <FormControl :icon="mdiPlusCircle" placeholder="Precio" type="number" v-model="rate.price" />
+                </div>
+                <div>
+                    <FormControl :icon="mdiLabelPercent" placeholder="% Qenqo" type="number" v-model="rate.comission" />
                 </div>
                 <div>
                     <FormControl :icon="mdiPlusCircle" placeholder="Min Personas" type="number" v-model="rate.min_people" />
@@ -65,6 +68,7 @@ export default {
                 max_people: '',
                 rate_type_id: '',
                 price: '',
+                comission: 0,
                 days_duration: '',
                 max_freeze_days: ''
             },

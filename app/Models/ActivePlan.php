@@ -21,6 +21,7 @@ class ActivePlan extends Model
         'created_by',
         'subtotal',
         'total',
+        'comission',
         'discount_code'
     ];
 

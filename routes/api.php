@@ -86,6 +86,8 @@ Route::get('/getAppointments', [ActivePlanAppointmentController::class, 'getAppo
 
 
 Route::post('/activePlanAppointment/markStudentAssistance', [ActivePlanAppointmentController::class, 'appoinmentAssisted']);
+Route::post('/activePlanAppointment/confirmStudentAssistance', [ActivePlanAppointmentController::class, 'confirmAssistance']);
+Route::post('/activePlanAppointment/unConfirmAssistance', [ActivePlanAppointmentController::class, 'unConfirmAssistance']);
 
 
 Route::get('/getPayments', [ActivePlanPaymentController::class, 'getPayments']);

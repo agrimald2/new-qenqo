@@ -19,6 +19,7 @@ class Rate extends Model
         'max_people',
         'rate_type_id',
         'price',
+        'comission',
         'days_duration',
         'max_freeze_days',
     ];

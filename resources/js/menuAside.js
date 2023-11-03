@@ -39,7 +39,7 @@ export default [
   },
   {
     href: "/activePlans",
-    label: "Grupos y Planes",
+    label: "Grupos",
     icon: mdiTable,
   },
   {
@@ -63,7 +63,7 @@ export default [
       },
       {
         label: "Entrenadores",
-        href: "/users/trainers",
+        href: "/trainers",
         icon: mdiWeightLifter,
       },
     ],
@@ -74,7 +74,7 @@ export default [
     menu: [
       {
         label: "Métodos de Pago",
-        href: "/users/admin",
+        href: "/paymentMethods",
         icon: mdiCashSync,
       },
       {

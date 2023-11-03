@@ -32,10 +32,12 @@ import Qr from './Qr.vue';
                         </h1>
                     </div>
                     <div>
-                        <BaseButton @click="markAssistance" :icon="mdiPlusCircle" label="Asistiré" class="bg-green-300 mr-4" v-if="assistance.status != 'Confirmado'"
+                        <BaseButton @click="markAssistance" :icon="mdiPlusCircle" label="Marcar Asistencia" class="bg-green-300 mr-4" v-if="assistance.status != 'Asistió' && isWithinOneHourRange"
                             color="green" target="_blank" rounded-full />
-                        <BaseButton @click="showCreateMethod" :icon="mdiPlusCircle" label="No Asistiré"
-                            class=" bg-red-300" color="green" target="_blank" rounded-full />
+                        <BaseButton @click="confirmAssistance" :icon="mdiPlusCircle" label="Asistiré" class="bg-green-300 mr-4" v-if="assistance.status != 'Confirmado' && isBeforeAppointmentDate"
+                            color="green" target="_blank" rounded-full />
+                        <BaseButton @click="unConfirmAssistance" :icon="mdiPlusCircle" label="No Asistiré"
+                            class=" bg-red-300" color="green" target="_blank" rounded-full v-if="isBeforeAppointmentDate" />
                     </div>
                 </CardBox>
             </div>
@@ -58,10 +60,47 @@ export default {
 
         }
     },
+    computed: {
+        isWithinOneHourRange() {
+            let currentTime = new Date();
+            let startTime = new Date(this.appointment.date + ' ' + this.appointment.start_time);
+            let endTime = new Date(this.appointment.date + ' ' + this.appointment.end_time);
+            return currentTime >= startTime && currentTime <= endTime;
+        },
+        isBeforeAppointmentDate() {
+            let currentTime = new Date();
+            let appointmentDate = new Date(this.appointment.date);
+            return currentTime <= appointmentDate;
+        }
+    },
     components: [StudentsTable, Qr],
     methods: {
-        markAssistance() {
+        confirmAssistance() {
+            axios.post('/api/activePlanAppointment/confirmStudentAssistance', {
+                active_plan_appointment_id: this.appointment.id,
+                student_id: this.student.id
+            })
+                .then(response => {
+                    window.location.reload();
+                })
+                .catch(error => {
+                    this.$toast.error('Error al marcar la asistencia');
+                });
+        },
+        markAssistance(){
             axios.post('/api/activePlanAppointment/markStudentAssistance', {
+                active_plan_appointment_id: this.appointment.id,
+                student_id: this.student.id
+            })
+                .then(response => {
+                    window.location.reload();
+                })
+                .catch(error => {
+                    this.$toast.error('Error al marcar la asistencia');
+                });
+        },
+        unConfirmAssistance(){
+            axios.post('/api/activePlanAppointment/unConfirmAssistance', {
                 active_plan_appointment_id: this.appointment.id,
                 student_id: this.student.id
             })

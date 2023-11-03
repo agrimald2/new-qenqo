@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 use App\Models\User;
 use App\Models\Trainer;
 use Illuminate\Support\Facades\Hash;
@@ -11,6 +12,10 @@ use Log;
 
 class TrainerController extends Controller
 {
+    public function index(){
+        return Inertia::render('Trainer/Index');
+    }
+
     public function store(Request $request){
 
         // Validate the request data

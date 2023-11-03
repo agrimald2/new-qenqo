@@ -70,7 +70,7 @@ const transactionBarItems = computed(() => mainStore.history);
                                 Grupo
                             </h1>
                             <div>
-                                <BaseButton href="https://github.com/justboil/admin-one-vue-tailwind" :icon="mdiGithub"
+                                <BaseButton href="/students/activePlans" :icon="mdiGithub"
                                     label="Clases" target="_blank" rounded-full />
                             </div>
                         </SectionBanner>

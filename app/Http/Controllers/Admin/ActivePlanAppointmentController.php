@@ -91,8 +91,16 @@ class ActivePlanAppointmentController extends Controller
             'active_plan_appointment_id' => 'required',
             'student_id' => 'required',
         ]);
-
+    
         $status = 'Confirmado';
+
+        $assistance = ActivePlanAppointmentAssistance::where('active_plan_appointment_id', $validatedData['active_plan_appointment_id'])
+        ->where('student_id', $validatedData['student_id'])
+        ->first();
+
+        $assistance->status = $status;
+        $assistance->save();
+        return;
     }
 
     public function unConfirmAssistance(Request $request){
@@ -110,7 +118,7 @@ class ActivePlanAppointmentController extends Controller
             'student_id' => 'required',
         ]);
     
-        $status = 'Confirmado';
+        $status = 'Asistió';
 
         $assistance = ActivePlanAppointmentAssistance::where('active_plan_appointment_id', $validatedData['active_plan_appointment_id'])
         ->where('student_id', $validatedData['student_id'])
@@ -121,5 +129,8 @@ class ActivePlanAppointmentController extends Controller
         return;
     }
 
+    public function sendAppointmentMessages(){
+        
+    }
 
 }

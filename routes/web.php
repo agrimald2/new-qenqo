@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\RateController;
 use App\Http\Controllers\Admin\ActivePlanController;
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Admin\ActivePlanAppointmentController;
 use App\Http\Controllers\Admin\DiscountCodeController;
 use App\Http\Controllers\Admin\ActivePlanPaymentController;
@@ -50,6 +51,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/activePlans', [App\Http\Controllers\Admin\ActivePlanController::class, 'store']);
     
     Route::get('/students', [StudentController::class, 'index'])->name('student.index');
+    
+    Route::get('/trainers', [TrainerController::class, 'index']);
     
     Route::get('/user/{id}', [UserController::class, 'showProfile'])->name('user.showProfile');
     

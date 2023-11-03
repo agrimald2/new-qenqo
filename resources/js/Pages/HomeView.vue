@@ -43,16 +43,15 @@ const transactionBarItems = computed(() => mainStore.history);
 
 <template>
   <LayoutAuthenticated>
-
     <Head title="Dashboard" />
     <SectionMain>
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
         <CardBoxWidget trend="12%" trend-type="up" color="text-emerald-500" :icon="mdiAccountMultiple" :number="512"
-          label="Clients" />
+          label="Alumnos" />
         <CardBoxWidget trend="12%" trend-type="down" color="text-blue-500" :icon="mdiCartOutline" :number="7770"
-          prefix="$" label="Sales" />
+          prefix="S/ " label="Ventas" />
         <CardBoxWidget trend="Overflow" trend-type="alert" color="text-red-500" :icon="mdiChartTimelineVariant"
-          :number="256" suffix="%" label="Performance" />
+          :number="256" suffix="" label="Clases" />
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -66,25 +65,6 @@ const transactionBarItems = computed(() => mainStore.history);
             :date="client.created" :progress="client.progress" />
         </div>
       </div>
-      <SectionTitleLineWithButton :icon="mdiChartPie" title="Trends overview">
-        <BaseButton :icon="mdiReload" color="whiteDark" @click="fillChartData" />
-      </SectionTitleLineWithButton>
-
-      <CardBox class="mb-6">
-        <div v-if="chartData">
-          <line-chart :data="chartData" class="h-96" />
-        </div>
-      </CardBox>
-
-      <SectionTitleLineWithButton :icon="mdiAccountMultiple" title="Clients" />
-
-      <NotificationBar color="info" :icon="mdiMonitorCellphone">
-        <b>Responsive table.</b> Collapses on mobile
-      </NotificationBar>
-
-      <CardBox has-table>
-        <TableSampleClients />
-      </CardBox>
     </SectionMain>
   </LayoutAuthenticated>
 </template>
