@@ -33,6 +33,11 @@ export default [
     icon: mdiViewList,
   },
   {
+    href: "/payments",
+    label: "Pagos",
+    icon: mdiCashSync,
+  },
+  {
     href: "/activePlans",
     label: "Grupos y Planes",
     icon: mdiTable,
@@ -90,7 +95,7 @@ export default [
     ],
   },
   {
-    href: "/",
+    href: "/discountCodes",
     label: "Cod. Descuento",
     icon: mdiTable,
   },

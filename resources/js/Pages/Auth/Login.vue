@@ -45,8 +45,12 @@ const submit = () => {
 
     <Head title="Login" />
 
-    <SectionFullScreen v-slot="{ cardClass }" bg="purplePink">
-      <CardBox :class="cardClass" is-form @submit.prevent="submit">
+    <SectionFullScreen v-slot="{ cardClass }">
+
+      <CardBox :class="cardClass" class="text-center" is-form @submit.prevent="submit">
+        <CardBox>
+          <img src="/logo.jpeg" alt="" style="height: 125px; margin-left: auto; margin-right: auto;">
+        </CardBox>
         <FormValidationErrors />
 
         <NotificationBarInCard v-if="status" color="info">
@@ -54,7 +58,8 @@ const submit = () => {
         </NotificationBarInCard>
 
         <FormField label="Username" label-for="username" help="Nombre de usuario">
-          <FormControl v-model="form.username" :icon="mdiAccount" id="username" autocomplete="username" type="username" required />
+          <FormControl v-model="form.username" :icon="mdiAccount" id="username" autocomplete="username" type="username"
+            required />
         </FormField>
 
         <FormField label="Password" label-for="password" help="Please enter your password">
@@ -72,9 +77,6 @@ const submit = () => {
               :disabled="form.processing" />
             <BaseButton v-if="canResetPassword" route-name="password.request" color="info" outline label="Remind" />
           </BaseButtons>
-          <Link :href="route('register')">
-          Register
-          </Link>
         </BaseLevel>
       </CardBox>
     </SectionFullScreen>
