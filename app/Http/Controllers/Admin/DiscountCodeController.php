@@ -3,12 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\DiscountCode;
+use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Log;
 
 class DiscountCodeController extends Controller
 {
+    public function index(){
+        return Inertia::render('DiscountCode/Index');
+    }
+
     public function store(Request $request){
+        Log::debug($request);
         $discountCode = DiscountCode::create($request->all());
         return response()->json($discountCode, 201);
     }

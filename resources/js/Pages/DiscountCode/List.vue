@@ -1,0 +1,51 @@
+<script setup>
+import BaseLevel from "@/Components/BaseLevel.vue";
+import BaseButtons from "@/Components/BaseButtons.vue";
+import BaseButton from "@/Components/BaseButton.vue";
+import { mdiEye, mdiTrashCan } from "@mdi/js";
+</script>
+<template>
+    <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+        <li class="" v-for="student in students">
+            <div class="flex items-center space-x-4">
+                <div class="flex-shrink-0">
+                    <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png"
+                        alt="Neil image">
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        {{ student.name }}
+                    </p>
+                    <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        {{ student.phone }} {{ student.id}}
+                    </p>
+                </div>
+                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                    <BaseButtons type="justify-start lg:justify-end" no-wrap>
+                        <BaseButton color="danger" :icon="mdiTrashCan" small @click="deleteStudent(student.id)" />
+                    </BaseButtons>
+                </div>
+            </div>
+        </li>
+    </ul>
+</template>
+<script>
+import axios from 'axios';
+
+export default {
+    props: ['students'],
+    data() {
+        return {
+
+        }
+    },
+    components: [],
+    methods: {
+        deleteStudent(studentId) {
+           this.$emit('delete-student', studentId); // emit the event with student id
+        },
+    },
+    mounted() {
+    },
+}
+</script>

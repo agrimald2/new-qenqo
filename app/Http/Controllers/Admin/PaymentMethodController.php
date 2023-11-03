@@ -5,9 +5,15 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\PaymentMethod;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+
 
 class PaymentMethodController extends Controller
 {
+    public function index(){
+        return Inertia::render('PaymentMethod/Index');
+    }
+
     public function getPaymentMethods(){
         $paymentMethods = PaymentMethod::all();
         return response()->json($paymentMethods);

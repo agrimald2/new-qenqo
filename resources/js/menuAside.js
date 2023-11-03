@@ -47,6 +47,11 @@ export default [
     icon: mdiAccountGroup,
     menu: [
       {
+        label: "Estudiantes",
+        href: "/students",
+        icon: mdiGymnastics,
+      },
+      {
         label: "Administradores",
         href: "/users/admin",
         icon: mdiAccountConvert,
@@ -55,16 +60,6 @@ export default [
         label: "Entrenadores",
         href: "/users/trainers",
         icon: mdiWeightLifter,
-      },
-      {
-        label: "Nutricionistas",
-        href: "/users/nutricionists",
-        icon: mdiApple,
-      },
-      {
-        label: "Estudiantes",
-        href: "/students",
-        icon: mdiGymnastics,
       },
     ],
   },

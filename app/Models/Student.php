@@ -38,4 +38,16 @@ class Student extends Model
             ActivePlanAppointment::class
         );
     }
+
+    public function appointments()
+    {
+        return $this->hasManyThrough(
+            ActivePlanAppointment::class,
+            ActivePlanAppointmentAssistance::class,
+            'student_id', // Foreign key on ActivePlanAppointmentAssistance table...
+            'id', // Foreign key on ActivePlanAppointment table...
+            'id', // Local key on Student table...
+            'active_plan_appointment_id' // Local key on ActivePlanAppointmentAssistance table...
+        );
+    }
 }

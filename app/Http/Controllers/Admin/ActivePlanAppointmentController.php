@@ -8,6 +8,7 @@ use App\Models\ActivePlanAppointment;
 use App\Models\ActivePlanAppointmentAssistance;
 use App\Models\ActivePlan;
 use App\Models\Student;
+use Illuminate\Support\Facades\Auth;
 use Log;
 use DB;
 use Inertia\Inertia;
@@ -94,7 +95,7 @@ class ActivePlanAppointmentController extends Controller
         $status = 'Confirmado';
     }
 
-    public function unConfirmAssistance(){
+    public function unConfirmAssistance(Request $request){
         $validatedData = $request->validate([
             'active_plan_appointment_id' => 'required',
             'student_id' => 'required',
@@ -103,12 +104,22 @@ class ActivePlanAppointmentController extends Controller
         $status = 'No Asistirá';
     }
     
-    public function appoinmentAssisted(){
+    public function appoinmentAssisted(Request $request){
         $validatedData = $request->validate([
             'active_plan_appointment_id' => 'required',
             'student_id' => 'required',
         ]);
     
-        $status = 'Asistió';
+        $status = 'Confirmado';
+
+        $assistance = ActivePlanAppointmentAssistance::where('active_plan_appointment_id', $validatedData['active_plan_appointment_id'])
+        ->where('student_id', $validatedData['student_id'])
+        ->first();
+
+        $assistance->status = $status;
+        $assistance->save();
+        return;
     }
+
+
 }

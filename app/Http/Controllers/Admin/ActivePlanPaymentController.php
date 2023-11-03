@@ -8,9 +8,14 @@ use App\Models\ActivePlan;
 use App\Models\ActivePlanPayment;
 use Illuminate\Support\Facades\Auth;
 use Log;
+use Inertia\Inertia;
 
 class ActivePlanPaymentController extends Controller
 {
+    public function index(){
+        return Inertia::render('Payments/Index');
+    }
+
     public function store(Request $request){
         Log::debug($request);
         $user = Auth::user();
@@ -54,6 +59,20 @@ class ActivePlanPaymentController extends Controller
 
     public function getPaymentsFromActivePlan($id){
         $payments = ActivePlanPayment::where('active_plan_id', $id)->with(['student.user'])->get();
+        return response()->json($payments);
+    }
+
+    public function getPayments(Request $request){
+        $startDate = $request->input('start_date');
+        $endDate = $request->input('end_date');
+
+        $query = ActivePlanPayment::with(['student.user', 'student.referredBy', 'activePlan']);
+
+        if ($startDate && $endDate) {
+            $query->whereBetween('created_at', [$startDate, $endDate]);
+        }
+
+        $payments = $query->get();
         return response()->json($payments);
     }
 }

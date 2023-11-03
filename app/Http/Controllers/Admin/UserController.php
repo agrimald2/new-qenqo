@@ -48,4 +48,5 @@ class UserController extends Controller
         $user = Auth::user();
         return redirect()->route('user.showProfile', ['id' => $user->id]);
     }
+
 }

@@ -13,17 +13,22 @@ use Log;
 class StudentController extends Controller
 {
     public function store(Request $request){
-
         // Validate the request data
         $validatedData = $request->validate([
             'dni' => 'required|unique:users',
             'name' => 'required',
             'phone' => 'required',
-            'username' => 'required|unique:users',
-            'password' => 'required',
+            'username' => 'nullable|unique:users',
+            'password' => 'nullable',
             'reffered_by' => 'nullable',
         ]);
     
+        // If username is empty, then make the username and password be like the dni
+        if(empty($validatedData['username'])) {
+            $validatedData['username'] = $validatedData['dni'];
+            $validatedData['password'] = $validatedData['dni'];
+        }
+
         // Create a user with role_id 3 (that belongs to the student)
         $user = User::create([
             'role_id' => 3, 
@@ -55,11 +60,8 @@ class StudentController extends Controller
     }
 
     public function updateRefferedBy(Request $request){
-        Log::debug($request);
         $user_id = $request->input('user_id');
         $reffered_by = $request->input('reffered_by');
-        Log::debug($reffered_by);
-        Log::debug($user_id);
         $student = Student::where('user_id', $user_id)->first();
 
         $student->reffered_by = $reffered_by;

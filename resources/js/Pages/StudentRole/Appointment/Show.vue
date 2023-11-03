@@ -1,6 +1,6 @@
 <script setup>
 import SectionMain from "@/Components/SectionMain.vue";
-import LayoutAuthenticated from "@/Layouts/LayoutAuthenticated.vue";
+import StudentsLayout from "@/Layouts/StudentsLayout.vue";
 import SectionTitleLineWithButton from "@/Components/SectionTitleLineWithButton.vue";
 import { Head } from "@inertiajs/vue3";
 import BaseButton from "@/Components/BaseButton.vue";
@@ -13,7 +13,7 @@ import PillTag from "@/Components/PillTag.vue";
 import Qr from './Qr.vue';
 </script>
 <template>
-    <LayoutAuthenticated>
+    <StudentsLayout>
 
         <Head title="Clase" />
         <SectionMain>
@@ -21,34 +21,38 @@ import Qr from './Qr.vue';
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
                 <CardBox class="mb-2">
                     <h3 class="font-bold text-xl">
-                        {{ appointment.date }} de {{ appointment.start_time }} al {{ appointment.end_time }}
+                        {{ appointment.date }} de {{ appointment.start_time.slice(0, 5) }} al {{
+                            appointment.end_time.slice(0, 5) }}
                     </h3>
                 </CardBox>
                 <CardBox class="center">
-                    <Qr :text="`https://qenqoperu.com/students/appointment/`+appointment.id" />
+                    <div>
+                        <h1 class="font-bold text-xl">
+                            {{ assistance.status }}
+                        </h1>
+                    </div>
+                    <div>
+                        <BaseButton @click="markAssistance" :icon="mdiPlusCircle" label="Asistiré" class="bg-green-300 mr-4" v-if="assistance.status != 'Confirmado'"
+                            color="green" target="_blank" rounded-full />
+                        <BaseButton @click="showCreateMethod" :icon="mdiPlusCircle" label="No Asistiré"
+                            class=" bg-red-300" color="green" target="_blank" rounded-full />
+                    </div>
                 </CardBox>
             </div>
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-4 mb-6">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
                 <CardBoxWidget :trend="'de ' + appointment.assistances.length" trend-type="up" color="text-blue-500"
                     :icon="mdiCartOutline" :number="0" prefix="" label="Confirmados" />
                 <CardBoxWidget :trend="'de' + appointment.assistances.length" trend-type="down" color="text-red-500"
                     :icon="mdiCartOutline" :number="0" prefix="" label="No Irán" />
-                <CardBoxWidget :trend="'de' + appointment.assistances.length" trend-type="down" color="text-red-500"
-                    :icon="mdiChartTimelineVariant" :number="0" suffix="" label="No Asistieron" />
-                <CardBoxWidget :trend="'de' + appointment.assistances.length" trend-type="up" color="text-red-500"
-                    :icon="mdiChartTimelineVariant" :number="0" suffix="" label="Asistieron" />
-            </div>
-            <div>
-                <StudentsTable :students="appointment.assistances" />
             </div>
         </SectionMain>
-    </LayoutAuthenticated>
+    </StudentsLayout>
 </template>
 <script>
 import axios from 'axios';
 import StudentsTable from './StudentsTable.vue';
 export default {
-    props: ['appointment'],
+    props: ['appointment', 'student', 'assistance'],
     data() {
         return {
 
@@ -56,7 +60,18 @@ export default {
     },
     components: [StudentsTable, Qr],
     methods: {
-
+        markAssistance() {
+            axios.post('/api/activePlanAppointment/markStudentAssistance', {
+                active_plan_appointment_id: this.appointment.id,
+                student_id: this.student.id
+            })
+                .then(response => {
+                    window.location.reload();
+                })
+                .catch(error => {
+                    this.$toast.error('Error al marcar la asistencia');
+                });
+        }
     },
     mounted() {
 

@@ -80,4 +80,14 @@ Route::get('/activePlans/appointments/{id}', [ActivePlanController::class, 'getA
 Route::post('/activePlanAppointments', [ActivePlanAppointmentController::class, 'store']);
 
 
+
 Route::get('/getAppointments', [ActivePlanAppointmentController::class, 'getAppointments']);
+
+
+
+Route::post('/activePlanAppointment/markStudentAssistance', [ActivePlanAppointmentController::class, 'appoinmentAssisted']);
+
+
+Route::get('/getPayments', [ActivePlanPaymentController::class, 'getPayments']);
+
+

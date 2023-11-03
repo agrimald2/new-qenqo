@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Inertia\Response;
+use Log;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -34,7 +35,16 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        $user = Auth::user();
+
+        Log::debug($user->role_id);
+        // Check user role and redirect accordingly
+        if ($user->role_id === 3) {
+            Log::debug("Hoila");
+            return redirect('/students/dashboard');
+        } else {
+            return redirect()->intended(RouteServiceProvider::HOME);
+        }
     }
 
     /**

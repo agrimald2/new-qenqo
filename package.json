@@ -23,6 +23,7 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
+        "dotenv": "^16.3.1",
         "qrcode.vue": "^3.4.1",
         "vue-router": "^4.2.5"
     }
