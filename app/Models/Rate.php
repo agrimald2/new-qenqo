@@ -17,20 +17,15 @@ class Rate extends Model
         'sessions_number',
         'min_people',
         'max_people',
-        'rate_type_id',
         'price',
         'comission',
         'days_duration',
+        'atropomedic_evaluation',
         'max_freeze_days',
     ];
 
     public function family()
     {
         return $this->belongsTo(Family::class);
-    }
-
-    public function rateType()
-    {
-        return $this->belongsTo(RateType::class);
     }
 }

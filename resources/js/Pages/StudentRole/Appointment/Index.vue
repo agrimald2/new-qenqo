@@ -15,25 +15,32 @@ import PillTag from "@/Components/PillTag.vue";
 
         <Head title="Clases Agendadas" />
         <SectionMain>
-            <SectionTitleLineWithButton title="Clases Agendadas" />
+            <h2 class="text-2xl font-semibold mb-4 text-white text-center main-font">Mis Clases</h2>
+
             <div class="grid grid-cols-4 gap-4 mb-2">
                 <div>
-                    <BaseButton @click="showCreateMethod" :icon="mdiPlusCircle" label="Nueva Clase" class="bg-green-300"
-                        target="_blank" rounded-full />
+                    <BaseButton @click="goTo('/students/scheduleAppointment')" :icon="mdiPlusCircle" label="Nueva Clase"
+                        :color="'purple'" class="bg-black text-white hover:bg-purple-700 transition duration-200 main-font"
+                        rounded-full />
                 </div>
             </div>
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
-                <CardBox class="mb-2">
-                    <FormControl :icon="mdiPlusCircle" type="date" v-model="filter.startDate" @change="fetchAppointments" />
-                </CardBox>
-                <CardBox class="mb-2">
-                    <FormControl :icon="mdiPlusCircle" type="date" v-model="filter.endDate" @change="fetchAppointments" />
-                </CardBox>
-                <CardBox class="mb-2">
-                    <FormControl :icon="mdiPlusCircle" type="select" v-model="filter.status" 
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-3 mb-6 bg-black pb-2 rounded">
+                <div class="text-white p-2 rounded-lg shadow-lg text-center px-4">
+                    <label for="startDate" class="block text-sm font-medium mb-1 main-font">Fecha Inicio</label>
+                    <FormControl id="startDate" :icon="mdiCalendar" type="date" v-model="filter.startDate"
+                        @change="fetchAppointments" class="text-black bg-purple-600 rounded-md" />
+                </div>
+                <div class="text-white p-2 rounded-lg shadow-lg text-center px-4">
+                    <label for="endDate" class="block text-sm font-medium mb-1 main-font">Fecha Final</label>
+                    <FormControl id="endDate" :icon="mdiCalendar" type="date" v-model="filter.endDate"
+                        @change="fetchAppointments" class="text-black bg-purple-600 rounded-md" />
+                </div>
+                <div class="text-white p-2 rounded-lg shadow-lg text-center px-4">
+                    <label for="status" class="block text-sm font-medium mb-1 main-font">Estado</label>
+                    <FormControl id="status" :icon="mdiFilter" type="select" v-model="filter.status"
                         :options="appointment_statuses.map(status => ({ label: status.value, value: status.id }))"
-                        @change="fetchAppointments" />
-                </CardBox>
+                        @change="fetchAppointments" class="text-black bg-purple-600 rounded-md" />
+                </div>
             </div>
             <Table :appointments="appointments" />
         </SectionMain>
@@ -83,6 +90,9 @@ export default {
                     console.error(error);
                 });
         },
+        goTo(url) {
+            window.location.href = url;
+        }
     },
     mounted() {
         this.fetchAppointments();

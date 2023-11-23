@@ -25,6 +25,8 @@ const props = defineProps({
 });
 const mainStore = useMainStore();
 
+console.dir(props.user);
+
 const profileForm = reactive({
     user_id: props.user.id,
     name: props.user.name,
@@ -88,7 +90,7 @@ const submitReffered = () => {
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <CardBox is-form @submit.prevent="submitProfile">
-                    <FormField label="Avatar" help="Max 500kb">
+                    <FormField label="Avatar" help="Max 500kb" v-if="props.user.role_id != 3">
                         <FormFilePicker label="Upload" />
                     </FormField>
 

@@ -16,12 +16,7 @@ import { mdiPlusCircle } from "@mdi/js";
                     <BaseButton @click="showCreateRateModal" :icon="mdiPlusCircle" label="Tarifa" class="bg-green-300"
                         target="_blank" rounded-full />
                 </div>
-                <div>
-                    <BaseButton @click="showCreateFamilyModal" :icon="mdiPlusCircle" label="Familia" class="bg-green-300"
-                        target="_blank" rounded-full />
-                </div>
             </div>
-            <CreateFamily v-if="showCreateFamily" @family-created="familyAdded" />
             <Create v-if="showCreateRate" :families="families" @rate-created="rateAdded" />
             <Table :rates="rates"/>
         </SectionMain>
@@ -44,10 +39,6 @@ export default {
     },
     components: [Create, CreateFamily, Table],
     methods: {
-        showCreateFamilyModal() {
-            this.showCreateRate = false;
-            this.showCreateFamily = true;
-        },
         fetchFamilies() {
             axios.get('/api/families')
                 .then(response => {
@@ -60,10 +51,6 @@ export default {
                 .catch(error => {
                     console.error(error);
                 });
-        },
-        familyAdded() {
-            this.showCreateFamily = false,
-                this.fetchFamilies();
         },
         showCreateRateModal() {
             this.showCreateFamily = false;

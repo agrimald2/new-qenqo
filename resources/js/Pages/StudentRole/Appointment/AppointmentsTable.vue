@@ -94,63 +94,46 @@ const openDeleteModal = (rate) => {
 
 </script>
 
-
 <template>
-    <CardBoxModal v-model="isModalDangerActive" title="Eliminar Alumno" button="danger" buttonLabel="Eliminar" has-cancel
-        @confirm="deleteRate">
-        <p>Are you sure you want to delete this student?</p>
-    </CardBoxModal>
-    <div v-if="checkedRows.length" class="p-3 bg-gray-100/50 dark:bg-slate-800">
+    <div v-if="checkedRows.length" class="p-3 bg-purple-600">
         <span v-for="checkedRow in checkedRows" :key="checkedRow.id"
-            class="inline-block px-2 py-1 rounded-sm mr-2 text-sm bg-gray-100 dark:bg-slate-700">
+            class="inline-block px-2 py-1 rounded-sm mr-2 text-sm bg-gray-300">
             {{ checkedRow.name }}
         </span>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th v-if="checkable" />
-                <th />
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-                <th />
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item, index) in itemsPaginated" :key="item.id">
-                <td class="border-b-0 lg:w-6 before:hidden">
-                    #{{ index + 1 }}
-                </td>
-                <td data-label="Name">
-                    {{ getDayOfWeekInSpanish(item.date) }}
-                </td>
-                <td data-label="Celular">
-                    {{ item.start_time.slice(0, -3) }} - {{ item.end_time.slice(0, -3) }}
-                </td>
-                <td data-label="DNI">
-                    <PillTag
-                        :color="item.status === 'Confirmado' ? 'warning' : item.status === 'Finalizado' ? 'success' : 'danger'"
-                        :label="item.status" :small="pillsSmall" :outline="pillsOutline" :icon="pillsIcon" />
-                </td>
-                <td class="before:hidden lg:w-1 whitespace-nowrap">
-                    <BaseButtons type="justify-start lg:justify-end" no-wrap>
-                        <BaseButton color="info" :icon="mdiEye" small :href="'/students/showAppointment/' + item.id" />
-                    </BaseButtons>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="p-3 lg:px-6 border-t border-gray-100 dark:border-slate-800">
-        <BaseLevel>
-            <BaseButtons>
-                <BaseButton v-for="page in pagesList" :key="page" :active="page === currentPage" :label="page + 1"
-                    :color="page === currentPage ? 'lightDark' : 'whiteDark'" small @click="currentPage = page" />
-            </BaseButtons>
-            <small>Page {{ currentPageHuman }} of {{ numPages }}</small>
-        </BaseLevel>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
+        <div v-for="(item, index) in itemsPaginated" :key="item.id" class="rounded-lg shadow-lg bg-black p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h5 class="text-lg font-bold text-gray-800 secondary-font yellow-qenqo-text">Clase #{{ index + 1 }}</h5>
+                <PillTag :color="item.status === 'Confirmado' ? 'green' : item.status === 'Finalizado' ? 'blue' : 'red'"
+                    class="main-font" :label="item.status" />
+            </div>
+            <div class="mb-2">
+                <div class="text-sm text-gray-600">Fecha:</div>
+                <div class="text-sm font-semibold">{{ getDayOfWeekInSpanish(item.date) }}</div>
+            </div>
+            <div class="mb-2">
+                <div class="text-sm text-gray-600">Hora:</div>
+                <div class="text-sm font-semibold">{{ item.start_time.slice(0, -3) }} - {{ item.end_time.slice(0, -3) }}
+                </div>
+            </div>
+            <div class="flex justify-end mt-4">
+                <BaseButton color="info" :icon="mdiEye" small :color="'purple'" class="bg-purple-500"
+                    :href="'/students/showAppointment/' + item.id" />
+            </div>
+        </div>
     </div>
+    <!-- 
+        <div class="flex justify-center p-3 lg:px-6 border-t border-gray-100 mt-5">
+            <BaseLevel>
+                <BaseButtons>
+                    <BaseButton v-for="page in pagesList" :key="page" :active="page === currentPage" :label="page + 1"
+                    :color="page === currentPage ? 'purple' : 'gray'" small @click="currentPage = page" />
+                </BaseButtons>
+                <small class="text-white">Página {{ currentPageHuman }} de {{ numPages }}</small>
+            </BaseLevel>
+        </div>
+    -->
 </template>
 <script>
 //import Create from "./Create.vue";

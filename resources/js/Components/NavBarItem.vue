@@ -44,8 +44,8 @@ const styleStore = useStyleStore();
 const componentClass = computed(() => {
   const base = [
     isDropdownActive.value
-      ? `${styleStore.navBarItemLabelActiveColorStyle} dark:text-slate-400`
-      : `${styleStore.navBarItemLabelStyle} dark:text-white dark:hover:text-slate-400 ${styleStore.navBarItemLabelHoverStyle}`,
+      ? `${styleStore.navBarItemLabelActiveColorStyle} text-slate-400`
+      : `${styleStore.navBarItemLabelStyle} text-white hover:text-slate-400 ${styleStore.navBarItemLabelHoverStyle}`,
     props.item.menu ? "lg:py-2 lg:px-3" : "py-2 px-3",
   ];
 

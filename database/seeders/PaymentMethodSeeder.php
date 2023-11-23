@@ -13,6 +13,11 @@ class PaymentMethodSeeder extends Seeder
     public function run(): void
     {
         PaymentMethod::create([
+            'name' => 'MercadoPago',
+            'description' => 'Pago por página web',
+        ]);
+
+        PaymentMethod::create([
             'name' => 'Efectivo',
             'description' => '-',
         ]);

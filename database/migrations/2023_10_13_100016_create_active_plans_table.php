@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('active_plans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('family_name');
             $table->string('rate_name');
             $table->integer('rate_sessions_number');
             $table->integer('rate_min_people');

@@ -12,6 +12,10 @@ use App\Http\Controllers\Admin\ActivePlanAppointmentController;
 use App\Http\Controllers\Admin\DiscountCodeController;
 use App\Http\Controllers\Admin\ActivePlanPaymentController;
 use App\Http\Controllers\Student\LoggedInStudentController;
+use App\Http\Controllers\Student\PlansController;
+use App\Http\Controllers\Student\NewAppointmentController;
+use App\Http\Controllers\Student\AppointmentNutriController;
+use App\Http\Controllers\Student\AppointmentTestController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -86,6 +90,17 @@ Route::middleware('auth')->group(function () {
         Route::get('/getActivePlans', [LoggedInStudentController::class, 'getLoggedInStudentActivePlans']);
         Route::get('/showActivePlan/{id}', [LoggedInStudentController::class, 'showActivePlan']);
         Route::get('/getActivePlanPayments/{id}', [LoggedInStudentController::class, 'getLoggedInStudentActivePlanPayments']);
+        
+        
+        Route::get('/buyRates', [PlansController::class, 'buyRates']);
+        Route::get('/scheduleAppointment', [NewAppointmentController::class, 'scheduleView']);
+        Route::get('/appointmentConfirmation', [NewAppointmentController::class, 'appointmentConfirmation']);
+        
+        Route::get('/scheduleAppointmentNutri', [AppointmentNutriController::class, 'scheduleView']);
+        Route::get('/appointmentConfirmationNutri', [AppointmentNutriController::class, 'appointmentConfirmation']);
+        
+        Route::get('/scheduleAppointmentTest', [AppointmentTestController::class, 'scheduleView']);
+        Route::get('/appointmentConfirmationTest', [AppointmentTestController::class, 'appointmentConfirmation']);
     });
 
 });

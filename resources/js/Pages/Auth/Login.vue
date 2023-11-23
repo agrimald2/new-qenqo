@@ -45,11 +45,10 @@ const submit = () => {
 
     <Head title="Login" />
 
-    <SectionFullScreen v-slot="{ cardClass }">
-
-      <CardBox :class="cardClass" class="text-center" is-form @submit.prevent="submit">
-        <CardBox>
-          <img src="/logo.jpeg" alt="" style="height: 125px; margin-left: auto; margin-right: auto;">
+    <SectionFullScreen v-slot="{ cardClass }" class="bg-black">
+      <CardBox :class="cardClass" class="text-center bg-purple-900" is-form @submit.prevent="submit">
+        <CardBox class="bg-purple-900">
+          <img src="/qenqo-logo-white.png" alt="" style="height: 125px; margin-left: auto; margin-right: auto;">
         </CardBox>
         <FormValidationErrors />
 
@@ -57,25 +56,22 @@ const submit = () => {
           {{ status }}
         </NotificationBarInCard>
 
-        <FormField label="Username" label-for="username" help="Nombre de usuario">
-          <FormControl v-model="form.username" :icon="mdiAccount" id="username" autocomplete="username" type="username"
+        <FormField label="Usuario" label-for="username" class="yellow-qenqo-text main-font">
+          <FormControl v-model="form.username" :icon="mdiAccount" id="username" autocomplete="username" type="username" class="secondary-font"
             required />
         </FormField>
 
-        <FormField label="Password" label-for="password" help="Please enter your password">
+        <FormField label="Contraseña" label-for="password" class="yellow-qenqo-text main-font">
           <FormControl v-model="form.password" :icon="mdiAsterisk" type="password" id="password"
             autocomplete="current-password" required />
         </FormField>
-
-        <FormCheckRadioGroup v-model="form.remember" name="remember" :options="{ remember: 'Remember' }" />
 
         <BaseDivider />
 
         <BaseLevel>
           <BaseButtons>
-            <BaseButton type="submit" color="info" label="Login" :class="{ 'opacity-25': form.processing }"
-              :disabled="form.processing" />
-            <BaseButton v-if="canResetPassword" route-name="password.request" color="info" outline label="Remind" />
+            <BaseButton type="submit" label="Entrar" :class="{ 'opacity-25': form.processing }"
+              class="yellow-qenqo-text main-font" :disabled="form.processing" />
           </BaseButtons>
         </BaseLevel>
       </CardBox>

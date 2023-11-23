@@ -85,7 +85,9 @@ export default {
                     "Estudiante": payment.student.user ? payment.student.user.name : "no",
                     "Plan": payment.active_plan.rate_name,
                     "Pagado": payment.total_payed,
-                    "Comision": payment.active_plan.comission,
+                    "%": payment.active_plan.comission + '%',
+                    "Comision": Number(payment.total_payed) * (Number(payment.active_plan.comission) / 100),
+                    "IGV": Number(payment.total_payed) * 0.18,
                 };
                 return formattedPayment;
             });

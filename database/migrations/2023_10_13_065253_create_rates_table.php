@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('sessions_number')->default(1);
             $table->integer('min_people')->default(1);
             $table->integer('max_people');
-            $table->unsignedBigInteger('rate_type_id');
             $table->decimal('price', 8, 2);
+            $table->decimal('comission', 8, 2)->default(20);
             $table->integer('days_duration');
             $table->integer('max_freeze_days')->default(0);
             $table->timestamps();

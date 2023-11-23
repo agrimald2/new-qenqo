@@ -58,43 +58,17 @@ const menuClick = (event) => {
 
 <template>
   <li>
-    <component
-      :is="item.route ? Link : 'a'"
-      :href="itemHref"
-      :target="item.target ?? null"
-      class="flex cursor-pointer"
-      :class="componentClass"
-      @click="menuClick"
-    >
-      <BaseIcon
-        v-if="item.icon"
-        :path="item.icon"
-        class="flex-none"
-        :class="activeInactiveStyle"
-        w="w-16"
-        :size="18"
-      />
-      <span
-        class="grow text-ellipsis line-clamp-1"
-        :class="[{ 'pr-12': !hasDropdown }, activeInactiveStyle]"
-        >{{ item.label }}</span
-      >
-      <BaseIcon
-        v-if="hasDropdown"
-        :path="isDropdownActive ? mdiMinus : mdiPlus"
-        class="flex-none"
-        :class="activeInactiveStyle"
-        w="w-12"
-      />
+    <component :is="item.route ? Link : 'a'" :href="itemHref" :target="item.target ?? null" class="flex cursor-pointer"
+      :class="componentClass" @click="menuClick">
+      <BaseIcon v-if="item.icon" :path="item.icon" class="flex-none" :class="activeInactiveStyle" w="w-16" :size="18" />
+      <span class="grow text-ellipsis line-clamp-1" :class="[{ 'pr-12': !hasDropdown }, activeInactiveStyle]">{{
+        item.label }}</span>
+      <BaseIcon v-if="hasDropdown" :path="isDropdownActive ? mdiMinus : mdiPlus" class="flex-none"
+        :class="activeInactiveStyle" w="w-12" />
     </component>
-    <AsideMenuList
-      v-if="hasDropdown"
-      :menu="item.menu"
-      :class="[
-        styleStore.asideMenuDropdownStyle,
-        isDropdownActive ? 'block dark:bg-slate-800/50' : 'hidden',
-      ]"
-      is-dropdown-list
-    />
+    <AsideMenuList v-if="hasDropdown" :menu="item.menu" :class="[
+      styleStore.asideMenuDropdownStyle,
+      isDropdownActive ? 'block dark:bg-slate-800/50' : 'hidden',
+    ]" is-dropdown-list />
   </li>
 </template>

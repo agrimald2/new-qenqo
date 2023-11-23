@@ -1,6 +1,6 @@
 <script setup>
 import { mdiForwardburger, mdiBackburger, mdiMenu } from "@mdi/js";
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import { router } from "@inertiajs/vue3";
 import menuAsideStudents from "@/menuAsideStudents.js";
 import menuNavBar from "@/menuNavBar.js";
@@ -10,6 +10,7 @@ import BaseIcon from "@/Components/BaseIcon.vue";
 import FormControl from "@/Components/FormControl.vue";
 import NavBar from "@/Components/NavBar.vue";
 import NavBarItemPlain from "@/Components/NavBarItemPlain.vue";
+import FloatingBottomMenu from "@/Components/FloatingBottomMenu.vue";
 import AsideMenu from "@/Components/AsideMenu.vue";
 import FooterBar from "@/Components/FooterBar.vue";
 import axios from 'axios';
@@ -36,6 +37,7 @@ const menuClick = (event, item) => {
   }
 };
 
+
 const getAuthUserInformation = () => {
   axios.get('/user-information')
     .then(response => {
@@ -58,28 +60,22 @@ getAuthUserInformation();
     'overflow-hidden lg:overflow-visible': isAsideMobileExpanded,
   }">
     <div :class="[layoutAsidePadding, { 'ml-60 lg:ml-0': isAsideMobileExpanded }]"
-      class="pt-14 min-h-screen w-screen transition-position lg:w-auto bg-gray-50 dark:bg-slate-800 dark:text-slate-100">
+      class="pt-14 min-h-screen w-screen transition-position lg:w-auto bg-gradient-purple text-slate-100 pb-16">
       <NavBar :menu="menuNavBar" :class="[
         layoutAsidePadding,
         { 'ml-60 lg:ml-0': isAsideMobileExpanded },
       ]" @menu-click="menuClick">
-        <NavBarItemPlain display="flex lg:hidden" @click.prevent="isAsideMobileExpanded = !isAsideMobileExpanded">
+        <NavBarItemPlain display="flex lg:hidden hidden" @click.prevent="isAsideMobileExpanded = !isAsideMobileExpanded">
           <BaseIcon :path="isAsideMobileExpanded ? mdiBackburger : mdiForwardburger" size="24" />
         </NavBarItemPlain>
         <NavBarItemPlain display="hidden lg:flex xl:hidden" @click.prevent="isAsideLgActive = true">
           <BaseIcon :path="mdiMenu" size="24" />
         </NavBarItemPlain>
-        <NavBarItemPlain use-margin>
-          <FormControl placeholder="Search (ctrl+k)" ctrl-k-focus transparent borderless />
-        </NavBarItemPlain>
       </NavBar>
-      <AsideMenu :is-aside-mobile-expanded="isAsideMobileExpanded" :is-aside-lg-active="isAsideLgActive" :menu="menuAsideStudents"
-        @menu-click="menuClick" @aside-lg-close-click="isAsideLgActive = false" />
+      <AsideMenu :is-aside-mobile-expanded="isAsideMobileExpanded" :is-aside-lg-active="isAsideLgActive"
+        :menu="menuAsideStudents" @menu-click="menuClick" @aside-lg-close-click="isAsideLgActive = false" />
       <slot />
-      <FooterBar>
-        Desarrollado por
-        <a href="https://e-pask.com" target="_blank" class="text-blue-600">e-Pask</a>
-      </FooterBar>
+      <FloatingBottomMenu :user_id="12" />
     </div>
   </div>
 </template>

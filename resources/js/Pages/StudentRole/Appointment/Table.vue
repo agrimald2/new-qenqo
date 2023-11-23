@@ -98,57 +98,60 @@ const openDeleteModal = (rate) => {
 <template>
     <CardBoxModal v-model="isModalDangerActive" title="Eliminar Alumno" button="danger" buttonLabel="Eliminar" has-cancel
         @confirm="deleteRate">
-        <p>Are you sure you want to delete this student?</p>
+        <p class="text-purple-300">Are you sure you want to delete this student?</p>
     </CardBoxModal>
-    <div v-if="checkedRows.length" class="p-3 bg-gray-100/50 dark:bg-slate-800">
+    <div v-if="checkedRows.length" class="p-3 bg-purple-700/50 dark:bg-slate-800">
         <span v-for="checkedRow in checkedRows" :key="checkedRow.id"
-            class="inline-block px-2 py-1 rounded-sm mr-2 text-sm bg-gray-100 dark:bg-slate-700">
+            class="inline-block px-2 py-1 rounded-sm mr-2 text-sm bg-gray-100">
             {{ checkedRow.name }}
         </span>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th v-if="checkable" />
-                <th />
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Estado</th>
-                <th>Acciones</th>
-                <th />
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item, index) in itemsPaginated" :key="item.id">
-                <td class="border-b-0 lg:w-6 before:hidden">
-                    #{{ index + 1 }}
-                </td>
-                <td data-label="Name">
-                    {{ item.date }}
-                </td>
-                <td data-label="Celular">
-                    {{ item.start_time }} - {{ item.end_time }}
-                </td>
-                <td data-label="DNI">
-                    <PillTag :color="item.status === 'Confirmado' ? 'warning' : item.status === 'Finalizado' ? 'success' : 'danger'" :label="item.status" :small="pillsSmall" :outline="pillsOutline"
-                        :icon="pillsIcon" />
-                </td>
-                <td class="before:hidden lg:w-1 whitespace-nowrap">
-                    <BaseButtons type="justify-start lg:justify-end" no-wrap>
-                        <BaseButton color="info" :icon="mdiEye" small :href="'/students/showAppointment/' + item.id" />
-                        <BaseButton color="warning" :icon="mdiDrawPen" small :href="'user/' + item.user_id" />
-                    </BaseButtons>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        <table class="bg-red-100">
+            <thead>
+                <tr>
+                    <th v-if="checkable" />
+                    <th />
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                    <th />
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item, index) in itemsPaginated" :key="item.id" class="mb-2">
+                    <td class="border-b-0 lg:w-6 before:hidden">
+                        #{{ index + 1 }}
+                    </td>
+                    <td data-label="Fecha">
+                        {{ item.date }}
+                    </td>
+                    <td data-label="Hora">
+                        {{ item.start_time }} - {{ item.end_time }}
+                    </td>
+                    <td data-label="Estado">
+                        <PillTag
+                            :color="item.status === 'Confirmado' ? 'warning' : item.status === 'Finalizado' ? 'success' : 'danger'"
+                            :label="item.status" :small="pillsSmall" :outline="pillsOutline" :icon="pillsIcon" />
+                    </td>
+                    <td class="before:hidden lg:w-1 whitespace-nowrap">
+                        <BaseButtons type="justify-start lg:justify-end" no-wrap>
+                            <BaseButton color="info" :icon="mdiEye" small :href="'/students/showAppointment/' + item.id" />
+                            <BaseButton color="warning" :icon="mdiDrawPen" small :href="'user/' + item.user_id" />
+                        </BaseButtons>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="p-3 lg:px-6 border-t border-gray-100 dark:border-slate-800">
         <BaseLevel>
             <BaseButtons>
                 <BaseButton v-for="page in pagesList" :key="page" :active="page === currentPage" :label="page + 1"
                     :color="page === currentPage ? 'lightDark' : 'whiteDark'" small @click="currentPage = page" />
             </BaseButtons>
-            <small>Page {{ currentPageHuman }} of {{ numPages }}</small>
+            <small class="text-purple-300">Page {{ currentPageHuman }} of {{ numPages }}</small>
         </BaseLevel>
     </div>
 </template>
